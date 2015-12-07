@@ -73,11 +73,15 @@ WSGI_APPLICATION = 'StudID.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
+"""
+Connection to mySQL dB with django-user
+"""
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'studid',
+        'USER': 'django',
+        'PASSWORD': 'qwerty'
     }
 }
 
