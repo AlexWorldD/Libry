@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Django default" uuid="1c4bcf67-2d2e-4906-af9f-cda782aad065">
+    <database-info product="MySQL" version="5.6.26-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="studid"/>
+    <table name="auth_group" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="80" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="auth_group_permissions_group_id_b120cbf9_fk_auth_group_id" table="auth_group_permissions" schema="" catalog="studid" columns="group_id"/>
+      <exported-key name="auth_user_groups_group_id_97559544_fk_auth_group_id" table="auth_user_groups" schema="" catalog="studid" columns="group_id"/>
+      <index name="name" unique="true" columns="name"/>
+    </table>
+    <table name="auth_group_permissions" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="group_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="permission_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="auth_group_permissi_permission_id_84c5c92e_fk_auth_permission_id" columns="permission_id" ref-table="auth_permission" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="auth_group_permissions_group_id_b120cbf9_fk_auth_group_id" columns="group_id" ref-table="auth_group" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="auth_group_permissions_group_id_0cd325b0_uniq" unique="true" columns="group_id,permission_id"/>
+      <index name="auth_group_permissi_permission_id_84c5c92e_fk_auth_permission_id" unique="false" columns="permission_id"/>
+    </table>
+    <table name="auth_permission" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="content_type_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="codename" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="auth_permissi_content_type_id_2f476e4b_fk_django_content_type_id" columns="content_type_id" ref-table="django_content_type" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="auth_group_permissi_permission_id_84c5c92e_fk_auth_permission_id" table="auth_group_permissions" schema="" catalog="studid" columns="permission_id"/>
+      <exported-key name="auth_user_user_perm_permission_id_1fbb5f2c_fk_auth_permission_id" table="auth_user_user_permissions" schema="" catalog="studid" columns="permission_id"/>
+      <index name="auth_permission_content_type_id_01ab375a_uniq" unique="true" columns="content_type_id,codename"/>
+    </table>
+    <table name="auth_user" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="password" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_login" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="is_superuser" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="username" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="first_name" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_name" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="254" scale="0" nullable="false" jdbcType="12"/>
+      <column name="is_staff" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="is_active" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <column name="date_joined" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="auth_user_groups_user_id_6a12ed8b_fk_auth_user_id" table="auth_user_groups" schema="" catalog="studid" columns="user_id"/>
+      <exported-key name="auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id" table="auth_user_user_permissions" schema="" catalog="studid" columns="user_id"/>
+      <exported-key name="django_admin_log_user_id_c564eba6_fk_auth_user_id" table="django_admin_log" schema="" catalog="studid" columns="user_id"/>
+      <index name="username" unique="true" columns="username"/>
+    </table>
+    <table name="auth_user_groups" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="group_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="auth_user_groups_group_id_97559544_fk_auth_group_id" columns="group_id" ref-table="auth_group" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="auth_user_groups_user_id_6a12ed8b_fk_auth_user_id" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="auth_user_groups_user_id_94350c0c_uniq" unique="true" columns="user_id,group_id"/>
+      <index name="auth_user_groups_group_id_97559544_fk_auth_group_id" unique="false" columns="group_id"/>
+    </table>
+    <table name="auth_user_user_permissions" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="permission_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="auth_user_user_perm_permission_id_1fbb5f2c_fk_auth_permission_id" columns="permission_id" ref-table="auth_permission" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="auth_user_user_permissions_user_id_14a6b632_uniq" unique="true" columns="user_id,permission_id"/>
+      <index name="auth_user_user_perm_permission_id_1fbb5f2c_fk_auth_permission_id" unique="false" columns="permission_id"/>
+    </table>
+    <table name="contact_address" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="street" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="building" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="appartment" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="true" jdbcType="5"/>
+      <column name="city_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="Contact_address_city_id_79c473e4_fk_Contact_city_id" columns="city_id" ref-table="contact_city" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="Contact_contact_address_id_af55a4d7_fk_Contact_address_id" table="contact_contact" schema="" catalog="studid" columns="address_id"/>
+      <index name="Contact_address_c7141997" unique="false" columns="city_id"/>
+    </table>
+    <table name="contact_city" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="city" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="country_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="Contact_city_country_id_772e64cc_fk_Contact_country_id" columns="country_id" ref-table="contact_country" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="Contact_address_city_id_79c473e4_fk_Contact_city_id" table="contact_address" schema="" catalog="studid" columns="city_id"/>
+      <index name="Contact_city_93bfec8a" unique="false" columns="country_id"/>
+    </table>
+    <table name="contact_contact" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="phone" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <column name="email" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12"/>
+      <column name="address_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="Contact_contact_address_id_af55a4d7_fk_Contact_address_id" columns="address_id" ref-table="contact_address" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="User_user_contact_id_30e032a9_fk_Contact_contact_id" table="user_user" schema="" catalog="studid" columns="contact_id"/>
+      <index name="Contact_contact_address_id_af55a4d7_fk_Contact_address_id" unique="false" columns="address_id"/>
+    </table>
+    <table name="contact_country" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="country" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="Contact_city_country_id_772e64cc_fk_Contact_country_id" table="contact_city" schema="" catalog="studid" columns="country_id"/>
+      <exported-key name="Libry_author_country_id_5ea28016_fk_Contact_country_id" table="libry_author" schema="" catalog="studid" columns="country_id"/>
+    </table>
+    <table name="django_admin_log" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="action_time" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="object_id" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="object_repr" sqlType="VARCHAR" precision="200" scale="0" nullable="false" jdbcType="12"/>
+      <column name="action_flag" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <column name="change_message" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="content_type_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="django_admin__content_type_id_c4bce8eb_fk_django_content_type_id" columns="content_type_id" ref-table="django_content_type" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="django_admin_log_user_id_c564eba6_fk_auth_user_id" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="django_admin__content_type_id_c4bce8eb_fk_django_content_type_id" unique="false" columns="content_type_id"/>
+      <index name="django_admin_log_user_id_c564eba6_fk_auth_user_id" unique="false" columns="user_id"/>
+    </table>
+    <table name="django_content_type" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="app_label" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="model" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="auth_permissi_content_type_id_2f476e4b_fk_django_content_type_id" table="auth_permission" schema="" catalog="studid" columns="content_type_id"/>
+      <exported-key name="django_admin__content_type_id_c4bce8eb_fk_django_content_type_id" table="django_admin_log" schema="" catalog="studid" columns="content_type_id"/>
+      <index name="django_content_type_app_label_76bd3d3b_uniq" unique="true" columns="app_label,model"/>
+    </table>
+    <table name="django_migrations" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="app" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="applied" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="django_session" schema="" catalog="studid" type="TABLE">
+      <column name="session_key" sqlType="VARCHAR" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="session_data" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="expire_date" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="session_key"/>
+      <index name="django_session_de54fa62" unique="false" columns="expire_date"/>
+    </table>
+    <table name="libry_author" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="first_name" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_name" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="patronymic" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+      <column name="year_born" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="year_death" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="country_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="Libry_author_country_id_5ea28016_fk_Contact_country_id" columns="country_id" ref-table="contact_country" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="Libry_writing_author_author_id_896123da_fk_Libry_author_id" table="libry_writing_author" schema="" catalog="studid" columns="author_id"/>
+      <index name="Libry_author_93bfec8a" unique="false" columns="country_id"/>
+    </table>
+    <table name="libry_book" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="num" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <column name="writing_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="Libry_book_writing_id_56cd78df_fk_Libry_writing_id" columns="writing_id" ref-table="libry_writing" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="Libry_book_book_id_book_id_6a83001b_fk_Libry_book_id" table="libry_book_book_id" schema="" catalog="studid" columns="book_id"/>
+      <exported-key name="Rental_rental_book_id_75ae10b8_fk_Libry_book_id" table="rental_rental" schema="" catalog="studid" columns="book_id"/>
+      <index name="Libry_book_4d643049" unique="false" columns="writing_id"/>
+    </table>
+    <table name="libry_book_book_id" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="book_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="Libry_book_book_id_book_id_6a83001b_fk_Libry_book_id" columns="book_id" ref-table="libry_book" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="Libry_book_book_id_user_id_54e52194_fk_User_user_id" columns="user_id" ref-table="user_user" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="Libry_book_book_id_book_id_7ca585b0_uniq" unique="true" columns="book_id,user_id"/>
+      <index name="Libry_book_book_id_user_id_54e52194_fk_User_user_id" unique="false" columns="user_id"/>
+    </table>
+    <table name="libry_language" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="language" sqlType="VARCHAR" precision="16" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="Libry_writing_lang_id_668a6459_fk_Libry_language_id" table="libry_writing" schema="" catalog="studid" columns="lang_id"/>
+      <exported-key name="Libry_writing_lang_original_id_fcb3e491_fk_Libry_language_id" table="libry_writing" schema="" catalog="studid" columns="lang_original_id"/>
+    </table>
+    <table name="libry_writing" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="release_year" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="page_num" sqlType="SMALLINT UNSIGNED" precision="5" scale="0" nullable="false" jdbcType="5"/>
+      <column name="description" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="lang_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="lang_original_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="Libry_writing_lang_id_668a6459_fk_Libry_language_id" columns="lang_id" ref-table="libry_language" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="Libry_writing_lang_original_id_fcb3e491_fk_Libry_language_id" columns="lang_original_id" ref-table="libry_language" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="Libry_book_writing_id_56cd78df_fk_Libry_writing_id" table="libry_book" schema="" catalog="studid" columns="writing_id"/>
+      <exported-key name="Libry_writing_author_writing_id_736d114b_fk_Libry_writing_id" table="libry_writing_author" schema="" catalog="studid" columns="writing_id"/>
+      <exported-key name="User_user_want2read_writing_id_81f4198e_fk_Libry_writing_id" table="user_user_want2read" schema="" catalog="studid" columns="writing_id"/>
+      <index name="Libry_writing_lang_id_668a6459_fk_Libry_language_id" unique="false" columns="lang_id"/>
+      <index name="Libry_writing_lang_original_id_fcb3e491_fk_Libry_language_id" unique="false" columns="lang_original_id"/>
+    </table>
+    <table name="libry_writing_author" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="writing_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="author_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="Libry_writing_author_author_id_896123da_fk_Libry_author_id" columns="author_id" ref-table="libry_author" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="Libry_writing_author_writing_id_736d114b_fk_Libry_writing_id" columns="writing_id" ref-table="libry_writing" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="Libry_writing_author_writing_id_118f5553_uniq" unique="true" columns="writing_id,author_id"/>
+      <index name="Libry_writing_author_author_id_896123da_fk_Libry_author_id" unique="false" columns="author_id"/>
+    </table>
+    <table name="rental_rental" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="rental_date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="return_date" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="book_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="from_user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="to_user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="Rental_rental_book_id_75ae10b8_fk_Libry_book_id" columns="book_id" ref-table="libry_book" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="Rental_rental_from_user_id_2fa38159_fk_User_user_id" columns="from_user_id" ref-table="user_user" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="Rental_rental_to_user_id_851e92b7_fk_User_user_id" columns="to_user_id" ref-table="user_user" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="Rental_rental_book_id_75ae10b8_fk_Libry_book_id" unique="false" columns="book_id"/>
+      <index name="Rental_rental_from_user_id_2fa38159_fk_User_user_id" unique="false" columns="from_user_id"/>
+      <index name="Rental_rental_to_user_id_851e92b7_fk_User_user_id" unique="false" columns="to_user_id"/>
+    </table>
+    <table name="user_user" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="first_name" sqlType="VARCHAR" precision="32" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_name" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="age" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="sex" sqlType="VARCHAR" precision="1" scale="0" nullable="true" jdbcType="12"/>
+      <column name="contact_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="User_user_contact_id_30e032a9_fk_Contact_contact_id" columns="contact_id" ref-table="contact_contact" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="Libry_book_book_id_user_id_54e52194_fk_User_user_id" table="libry_book_book_id" schema="" catalog="studid" columns="user_id"/>
+      <exported-key name="Rental_rental_from_user_id_2fa38159_fk_User_user_id" table="rental_rental" schema="" catalog="studid" columns="from_user_id"/>
+      <exported-key name="Rental_rental_to_user_id_851e92b7_fk_User_user_id" table="rental_rental" schema="" catalog="studid" columns="to_user_id"/>
+      <exported-key name="User_user_want2read_user_id_9655283b_fk_User_user_id" table="user_user_want2read" schema="" catalog="studid" columns="user_id"/>
+      <index name="User_user_contact_id_30e032a9_fk_Contact_contact_id" unique="false" columns="contact_id"/>
+    </table>
+    <table name="user_user_want2read" schema="" catalog="studid" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="writing_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="User_user_want2read_user_id_9655283b_fk_User_user_id" columns="user_id" ref-table="user_user" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="User_user_want2read_writing_id_81f4198e_fk_Libry_writing_id" columns="writing_id" ref-table="libry_writing" ref-schema="" ref-catalog="studid" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="User_user_want2read_user_id_ab2f6cba_uniq" unique="true" columns="user_id,writing_id"/>
+      <index name="User_user_want2read_writing_id_81f4198e_fk_Libry_writing_id" unique="false" columns="writing_id"/>
+    </table>
+  </data-source>
+</component>
