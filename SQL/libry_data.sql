@@ -50,3 +50,10 @@ INSERT INTO user VALUES (1, 'Алексей','Малютин','+79818573314', 20
 (2, 'Дарья','','', 18, 'F', 2, 'Denali', '', 'b99fef31fa25246f1dac85ac660f49d62af403aa0c9012d2946f1f6a7c03c8871361a709272775f23efacc64f59d607b7beae2e030ac7cca92f1557f4698db6f', '2e3fce77cf8c4c7478a96d207c1c39715892cac84a18cbec9b634f4bc22b390b48cd30a4df2e7ebbaee65c346a662c5be2d12441322f7a4bac821a382c4af091'),
 (3, 'User Example','','', 20, 'M', 3, 'Example', '', '4dff4ea340f0a823f15d3f4f01ab62eae0e5da579ccb851f8db9dfe84c58b2b37b89903a740e1ee172da793a6e79d560e5f7f9bd058a12a280433ed6fa46510a', '2e3fce77cf8c4c7478a96d207c1c39715892cac84a18cbec9b634f4bc22b390b48cd30a4df2e7ebbaee65c346a662c5be2d12441322f7a4bac821a382c4af091');
 COMMIT;
+--
+-- Dumping data for table address
+--
+SET AUTOCOMMIT=0;
+INSERT INTO address VALUES (1, 'Ботаническая, 64/3', '' , 1),
+(2, 'Ботаническая, 64/2', '' , 1);
+COMMIT;
