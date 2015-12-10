@@ -5,6 +5,7 @@
  * Date: 10.12.2015
  * Time: 23:05
  */
+include_once 'login_config.php';
 // Crate a secure session
 function sec_session_start()
 {
@@ -23,7 +24,7 @@ function sec_session_start()
 // Login function
 function login($username, $password, $mysqli) {
     if ($stmt = $mysqli->prepare("SELECT user_id, password, salt FROM user WHERE username = ? LIMIT 1")) {
-        $stmt->bind_param('u', $username);
+        $stmt->bind_param('s', $username);
         $stmt->execute();
         $stmt->store_result();
         //Getting variables from result
@@ -75,7 +76,7 @@ function login_check($mysqli) {
                                       FROM user
                                       WHERE user_id = ? LIMIT 1")) {
             // Bind "$user_id" to parameter.
-            $stmt->bind_param('id', $user_id);
+            $stmt->bind_param('s', $user_id);
             $stmt->execute();
             $stmt->store_result();
 

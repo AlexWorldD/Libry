@@ -96,7 +96,7 @@ CREATE TABLE user (
 -- INFO for Login
 	username VARCHAR(32) NOT NULL,
     email VARCHAR(64) NOT NULL,
-    pass CHAR(128) NOT NULL,
+    password CHAR(128) NOT NULL,
     salt CHAR(128) NOT NULL,
     PRIMARY KEY (user_id),
     INDEX idx_fk_address_id (address_id),
