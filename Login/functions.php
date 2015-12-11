@@ -11,7 +11,7 @@ function sec_session_start()
 {
     $session_name = 'secure_session_id';
     $http_only = true;
-    if (ini_set('session.use_only_cookies', 1) == FALSE) {
+    if (ini_set('session.use_only_cookies', 1) === FALSE) {
         header("Location: ../error.php?err=Could not initiate a safe session (ini_set)");
         exit();
     }
@@ -28,12 +28,16 @@ function login($username, $password, $mysqli) {
         $stmt->execute();
         $stmt->store_result();
         //Getting variables from result
-        $stmt->bind_result($user_id, $db_pass, $salt);
+        $stmt->bind_result($user_id, $bd_pass, $salt);
         $stmt->fetch();
         // Checking username and password
+        // pass for Alexey
+        //$password='qwerty';
         $password = hash('sha512', $password . $salt);
+        // pass hash for Alexey
+        // $password = '8550b3ac4eb782769091469e0a31bf49bc9f8ca0f95731382c080596894ead5213e899a8952f62ed9765fb9a16f7db89d4b16cfdd5ca9d71ac20751687cf6816';
         if ($stmt->num_rows == 1) {
-            if ($db_pass == $password) {
+            if ($bd_pass == $password) {
                 //Password is correct
                 $user_browser = $_SERVER['HTTP_USER_AGENT'];
                 $user_id = preg_replace("/[^0-9]+/", "", $user_id);

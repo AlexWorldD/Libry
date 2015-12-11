@@ -5,7 +5,7 @@ function formhash(form, password) {
     p.name = "p";
     p.type = "hidden";
     p.value = hex_sha512(password.value);
-
+    console.log(p.value);
     // Make sure the plaintext password doesn't get sent.
     password.value = "";
 
@@ -13,13 +13,13 @@ function formhash(form, password) {
     form.submit();
 }
 
-function regformhash(form, uid, email, password, conf) {
+function regformhash(form, uid, f_name, l_name, email, password, conf) {
     // Check each field has a value
-    if (uid.value == '' || email.value == '' || password.value == '' || conf.value == '') {
+    if (uid.value == '' || f_name.value =='' || l_name.value=='' || email.value == '' || password.value == '' || conf.value == '') {
         alert('You must provide all the requested details. Please try again');
         return false;
     }
-
+// TODO add Check for first and last names.
     // Check the username
     re = /^\w+$/;
     if(!re.test(form.username.value)) {

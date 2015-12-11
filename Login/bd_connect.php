@@ -5,6 +5,7 @@
  * Date: 10.12.2015
  * Time: 22:49
  */
+include_once 'login_config.php';
 // login - SELECT, INSERT and UPDATE only.
 $mysqli = new mysqli(HOST, USER_Login, PASSWORD_Login , DATABASE);
 if (!$mysqli) {

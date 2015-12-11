@@ -5,7 +5,7 @@
  * Date: 11.12.2015
  * Time: 0:21
  */
-define("HOST", "bd.localhost");
+define("HOST", "127.0.0.1:3306");
 define("USER_Login", "login");
 define("PASSWORD_Login", "qwerty");
 define("USER", "php");

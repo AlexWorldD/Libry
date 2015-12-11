@@ -1,9 +1,6 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Алексей
- * Date: 11.12.2015
- * Time: 0:15
  */
 include_once 'login/register.inc.php';
 include_once 'login/functions.php';
@@ -14,7 +11,7 @@ include_once 'login/functions.php';
     <meta charset="UTF-8">
     <title>Регистрация</title>
     <script type="text/JavaScript" src="js/sha512.js"></script>
-    <script type="text/JavaScript" src="js/forms.js"></script>
+    <script type="text/JavaScript" src="js/hash_functions.js"></script>
     <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
@@ -40,6 +37,8 @@ if (!empty($error_msg)) {
 <form method="post" name="registration_form" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>">
     Username: <input type='text' name='username' id='username' /><br>
     Email: <input type="text" name="email" id="email" /><br>
+    First Name: <input type="text" name="f_name" id="f_name" /><br>
+    Last Name: <input type="text" name="l_name" id="l_name" /><br>
     Password: <input type="password"
                      name="password"
                      id="password"/><br>
@@ -50,6 +49,8 @@ if (!empty($error_msg)) {
            value="Register"
            onclick="return regformhash(this.form,
                                    this.form.username,
+                                   this.form.f_name,
+                                   this.form.l_name,
                                    this.form.email,
                                    this.form.password,
                                    this.form.confirmpwd);" />
