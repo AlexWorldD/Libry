@@ -52,10 +52,12 @@ function login($username, $password, $mysqli) {
                 return true;
             } else {
                 //password wrong
+                $er_msg="Password is wrong!";
                 return false;
             }
         } else {
             //No user in bd
+            $er_msg="Not found user with this username!";
             return false;
         }
     } else {

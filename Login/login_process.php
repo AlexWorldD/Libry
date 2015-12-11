@@ -7,19 +7,18 @@
  */
 include_once 'bd_connect.php';
 include_once 'functions.php';
-
+$er_msg=""; // message for login errors
 sec_session_start(); // Start secure session
-
 if (isset($_POST['username'], $_POST['p'])) {
     $username = $_POST['username'];
     $password = $_POST['p']; // The hashed password.
-
-    if (login($username, $password, $mysqli) == true) {
+    if (login($username, $password, $mysqli) ==TRUE) {
         // Login success
-        header('Location: ../protected_page.php');
+        header('Location: ../index.php');
     } else {
         // Login failed
-        header('Location: ../error.php');
+        $er_msg="Login falled!";
+        header('Location: ../index.php');
     }
 } else {
     echo 'Invalid Request';
