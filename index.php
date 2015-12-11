@@ -1,12 +1,12 @@
 <?php
-include_once 'Login/bd_connect.php';
-include_once 'Login/functions.php';
+include_once 'db_connection/bd_connect.php';
+include_once 'db_connection/functions.php';
 
 sec_session_start(); // start secure session
 ?>
 <?php if (login_check($mysqli) == true) :
     mysqli_close($mysqli);
-    include_once 'Login/bd_connect_secure.php';?>
+    include_once 'db_connection/bd_connect_secure.php';?>
     <!DOCTYPE html>
     <html>
 <head>
@@ -26,7 +26,7 @@ sec_session_start(); // start secure session
 </html>
 <?php else : ?>
     <?php
-    include_once 'login/bd_connect.php';
+    include_once 'db_connection/bd_connect.php';
     if (login_check($mysqli) == true) {
         $logged = 'in';
     } else {
@@ -64,7 +64,7 @@ sec_session_start(); // start secure session
                         echo '<h4 class="text-center warning">'.$er_msg.'</h4>';
                     }
                     ?>
-                    <form class="form-signin" action="Login/login_process.php" method="post" name="login_form">
+                    <form class="form-signin" action="db_connection/login_process.php" method="post" name="login_form">
                         <input type="text" class="form-control" placeholder="Username" required autofocus name="username">
                         <input type="password" class="form-control" placeholder="Password" required name="password">
                         <input type="button" class="btn btn-lg btn-primary btn-block"

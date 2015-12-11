@@ -5,8 +5,8 @@
  * Date: 11.12.2015
  * Time: 21:30
  */
-include_once 'Login/bd_connect_secure.php';
-include_once 'login/functions.php';
+include_once 'db_connection/bd_connect_secure.php';
+include_once 'db_connection/functions.php';
 sec_session_start(); // start secure session
 ?>
 <!DOCTYPE html>

@@ -1,6 +1,6 @@
 <?php
-include_once 'login/register.inc.php';
-include_once 'login/functions.php';
+include_once 'db_connection/register.inc.php';
+include_once 'db_connection/functions.php';
 ?>
 <!DOCTYPE html>
 <html>
