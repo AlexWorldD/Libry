@@ -91,7 +91,8 @@ CREATE TABLE user (
     phone VARCHAR(16) DEFAULT NULL,
     age TINYINT UNSIGNED DEFAULT NULL,
     sex ENUM('F', 'M') DEFAULT NULL,
-    address_id INT UNSIGNED NOT NULL,
+    -- TODO change adress_id to NOT NULL!!!
+    address_id INT UNSIGNED DEFAULT NULL,
 -- TODO make secure.
 -- INFO for Login
 	username VARCHAR(32) NOT NULL,
