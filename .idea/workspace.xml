@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="Start adding user's page.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/edit_user.js" />
+    <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="Absolute KOST'blL'">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/sidebar.css" afterPath="$PROJECT_DIR$/css/sidebar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_connection/get_user.php" afterPath="$PROJECT_DIR$/db_connection/get_user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/edit_user.js" afterPath="$PROJECT_DIR$/js/edit_user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/load_user.js" afterPath="$PROJECT_DIR$/js/load_user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.php" afterPath="$PROJECT_DIR$/main.php" />
     </list>
@@ -32,11 +30,10 @@
       <file leaf-file-name="main.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73140955">
-              <caret line="177" column="129" selection-start-line="177" selection-start-column="129" selection-end-line="177" selection-end-column="129" />
+            <state vertical-scroll-proportion="-0.24750277">
+              <caret line="167" column="93" selection-start-line="167" selection-start-column="93" selection-end-line="167" selection-end-column="93" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#9284#9521#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -56,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/js/edit_user.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+              <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
               <folding>
                 <element signature="n#!!doc;n#edit_user#0" expanded="false" />
               </folding>
@@ -100,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/js/loadcity.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc;n#loadcity#0" expanded="false" />
               </folding>
@@ -121,11 +118,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="get_city.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db_connection/get_city.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.806452">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+              <folding>
+                <marker date="1449884499409" expanded="true" signature="236:284" placeholder="SELECT city_..city..." />
+                <marker date="1449884499409" expanded="true" signature="484:514" placeholder="SELECT city_..city..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="load_user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/load_user.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="54" />
               <folding>
                 <element signature="n#!!doc;n#load_user#0" expanded="false" />
               </folding>
@@ -187,10 +197,10 @@
         <option value="$PROJECT_DIR$/js/loadcity2.js" />
         <option value="$PROJECT_DIR$/js/edit_adr.html" />
         <option value="$PROJECT_DIR$/db_connection/get_user.php" />
-        <option value="$PROJECT_DIR$/js/load_user.js" />
-        <option value="$PROJECT_DIR$/js/edit_user.js" />
         <option value="$PROJECT_DIR$/css/sidebar.css" />
+        <option value="$PROJECT_DIR$/js/load_user.js" />
         <option value="$PROJECT_DIR$/main.php" />
+        <option value="$PROJECT_DIR$/js/edit_user.js" />
       </list>
     </option>
   </component>
@@ -486,7 +496,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449941096243</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Absolute KOST'blL'">
+      <created>1449958153944</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1449958153944</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -545,7 +561,8 @@
     <MESSAGE value="Can't add AJAX :((" />
     <MESSAGE value="AJAX is trying to work.." />
     <MESSAGE value="Start adding user's page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Start adding user's page." />
+    <MESSAGE value="Absolute KOST'blL'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Absolute KOST'blL'" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -586,8 +603,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#9284#9521#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -845,17 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db_connection/get_city.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.806452">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <marker date="1449884499409" expanded="true" signature="236:284" placeholder="SELECT city_..city..." />
-            <marker date="1449884499409" expanded="true" signature="484:514" placeholder="SELECT city_..city..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/register2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.16129">
@@ -906,13 +911,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/loadcity.js">
+    <entry file="file://$PROJECT_DIR$/js/easyui/jquery_easy_ui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc;n#loadcity#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="319.8889">
+          <caret line="14386" column="4" selection-start-line="14386" selection-start-column="4" selection-end-line="14386" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/sidebar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.225807">
+          <caret line="129" column="15" selection-start-line="129" selection-start-column="15" selection-end-line="129" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -927,20 +938,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/easyui/jquery_easy_ui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="319.8889">
-          <caret line="14386" column="4" selection-start-line="14386" selection-start-column="4" selection-end-line="14386" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/load_user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="54" />
           <folding>
             <element signature="n#!!doc;n#load_user#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/loadcity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#loadcity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_connection/get_city.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.806452">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <marker date="1449884499409" expanded="true" signature="236:284" placeholder="SELECT city_..city..." />
+            <marker date="1449884499409" expanded="true" signature="484:514" placeholder="SELECT city_..city..." />
           </folding>
         </state>
       </provider>
@@ -948,28 +972,19 @@
     <entry file="file://$PROJECT_DIR$/js/edit_user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
           <folding>
             <element signature="n#!!doc;n#edit_user#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/sidebar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.225807">
-          <caret line="129" column="15" selection-start-line="129" selection-start-column="15" selection-end-line="129" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73140955">
-          <caret line="177" column="129" selection-start-line="177" selection-start-column="129" selection-end-line="177" selection-end-column="129" />
+        <state vertical-scroll-proportion="-0.24750277">
+          <caret line="167" column="93" selection-start-line="167" selection-start-column="93" selection-end-line="167" selection-end-column="93" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#form#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#9284#9521#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -144,26 +144,64 @@ sec_session_start(); // start secure session
                         <div class="panel-body">
 
                             <div class="row">
-                                <div class="col-md-5">
+                                <div class="col-md-5 col-xs-5">
                                     <div class="input-group">
                                         <span class="input-group-addon">@</span>
                                         <input type="text" class="form-control" placeholder="" id="email" disabled>
                                     </div>
-                                    <br>
-
+                                </div>
+                                <div class="col-md-6 col-md-offset-1 ">
                                     <div class="input-group">
                                     <span class="input-group-addon"><span
                                             class="glyphicon glyphicon-phone"></span></span>
                                         <input type="text" class="form-control" placeholder="" id="phone" disabled>
                                     </div>
                                 </div>
+                            </div>
+                            <br>
+                            <br>
 
+                            <div class="row">
+                                <div class="col-md-5 col-xs-5">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Страна</span>
+                                        <select type="text" class="form-control" id="country" disabled>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-offset-1 col-xs-6 col-md-offset-1">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Город</span>
+                                        <select type="text" class="form-control" id="city" disabled>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-5 col-xs-5">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Адрес</span>
+                                        <input type="text" class="form-control"  id="address" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-md-offset-1 col-xs-6 col-md-offset-1">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Адрес (доп.)</span>
+                                        <input type="text" class="form-control"  id="address2" disabled>
+                                    </div>
+                                </div>
+                            </div>
+<!--
                                 <div class="col-md-5 col-md-offset-1" id="user_ad">
                                     <address id="address">
                                     </address>
                                 </div>
-
+-->
                                 <!--Edited field for address -->
+                                <!--
                                 <div class="col-md-5 col-md-offset-1" id="user_ad_ed">
                                    <div class="row" >
                                        <form class="form-horizontal" role="form" method="post">
@@ -179,11 +217,13 @@ sec_session_start(); // start secure session
                                            </div>
                                        </form>
                                 </div>
+
                                     <div class="input-group">
                                         <span class="input-group-addon">Адрес</span>
                                         <input type="text" class="form-control"  id="user_address">
                                     </div>
-                                 </div>
+                                    -->
+                        </div>
                         </div>
                     </div>
                 </div>
