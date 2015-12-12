@@ -13,14 +13,11 @@ CREATE TABLE writing (
 	writing_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     title VARCHAR(128) NOT NULL,
     release_year SMALLINT UNSIGNED DEFAULT NULL,
-    page_num TINYINT UNSIGNED DEFAULT NULL,
     description TEXT,
-    lang TINYINT UNSIGNED NOT NULL,
     lang_origin TINYINT UNSIGNED NOT NULL,
+    numbers TINYINT UNSIGNED DEFAULT NULL,
     PRIMARY KEY (writing_id),
-    INDEX idx_fk_lang (lang),
     INDEX idx_fk_lang_original (lang_origin),
-    CONSTRAINT fk_writing_lang FOREIGN KEY (lang) REFERENCES language (language_id) ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT fk_writing_lang_original FOREIGN KEY (lang_origin) REFERENCES language (language_id) ON DELETE RESTRICT ON UPDATE CASCADE
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 --
@@ -52,9 +49,12 @@ CREATE TABLE language (
 CREATE TABLE book (
 	book_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     writing_id INT UNSIGNED NOT NULL,
-    numbers TINYINT UNSIGNED DEFAULT NULL,
+    lang TINYINT UNSIGNED DEFAULT NULL,
+    page_num SMALLINT UNSIGNED DEFAULT NULL,
     PRIMARY KEY (book_id),
+    INDEX idx_fk_lang (lang),
     INDEX idx_fk_writing_id (writing_id),
+    CONSTRAINT fk_writing_lang FOREIGN KEY (lang) REFERENCES language (language_id) ON DELETE RESTRICT ON UPDATE CASCADE,
     CONSTRAINT fk_book_writing FOREIGN KEY (writing_id) REFERENCES writing (writing_id) ON DELETE RESTRICT ON UPDATE CASCADE
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 --
@@ -164,7 +164,20 @@ CREATE TABLE rental (
 	CONSTRAINT fk_rental_user_from FOREIGN KEY (user_from) REFERENCES user (user_id) ON DELETE RESTRICT ON UPDATE CASCADE,
 	CONSTRAINT fk_rental_user_to FOREIGN KEY (user_to) REFERENCES user (user_id) ON DELETE RESTRICT ON UPDATE CASCADE
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
+DELIMITER $$
+CREATE TRIGGER update_count_writing_insert AFTER INSERT ON book
+FOR EACH ROW
+BEGIN
+  UPDATE writing SET numbers = numbers + 1 WHERE writing_id = NEW.writing_id;
+END $$
+DELIMITER ;
+DELIMITER $$
+CREATE TRIGGER update_count_writing_dekete AFTER DELETE ON book
+FOR EACH ROW
+BEGIN
+  UPDATE writing SET numbers = numbers - 1 WHERE writing_id = OLD.writing_id;
+END $$
+DELIMITER ;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
