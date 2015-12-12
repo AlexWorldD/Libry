@@ -21,7 +21,13 @@ sec_session_start(); // start secure session
     <link href="css/sidebar.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="Bootstrap3/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/easyui/easyui.css">
+    <link rel="stylesheet" type="text/css" href="js/easyui/icon.css">
+    <script type="text/javascript" src="js/easyui/jquery_easy_ui.js"></script>
+    <script type="text/javascript" src="http://www.jeasyui.com/easyui/datagrid-detailview.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css"> -->
     <script type="text/JavaScript" src="js/sha512.js"></script>
+    <script type="text/JavaScript" src="js/loadcity.js"></script>
     <script type="text/JavaScript" src="js/hash_functions.js"></script>
 </head>
 <body>
@@ -71,12 +77,31 @@ sec_session_start(); // start secure session
             <div class="row">
                 <div class="col-lg-12">
                     <h1>Simple Sidebar</h1>
-                    <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                    <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
                 </div>
             </div>
+
         </div>
+        <form class="form-horizontal" role="form" method="post">
+            <div class="form-group">
+                <div class="col-sm-4">
+                    <div calss="fitem">
+                        <label>Страна:</label>
+                        <input id="country" class="easyui-combobox" name="state" style="width:150px;" data-options="valueField:'country_id',textField:'country',url:'db_connection/get_country.php',method:'get',
+                        onSelect: function(){
+                        alert($('#country').combobox('getValue'));
+                        loadcity($('#country').combobox('getValue'));
+                        }">
+                    </div>
+                    <div calss="fitem">
+                        <label>Город:</label>
+                        <input id="city" class="easyui-combobox" name="state" style="width:150px;" data-options="
+                        valueField:'city_id',
+                        textField:'city',
+                      >
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
     <!-- /#page-content-wrapper -->
     <script>
