@@ -12,11 +12,10 @@ function loadcity(it)
                 alert("Error with AJAX!");
             },
             success: function (data) {
-                $.parseJSON
                 $('#city').combobox({
                     valueField: 'city_id',
                     textField: 'city',
-                    loadData: data
+                    data: data
                 });
             }
         }

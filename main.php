@@ -88,16 +88,12 @@ sec_session_start(); // start secure session
                         <label>Страна:</label>
                         <input id="country" class="easyui-combobox" name="state" style="width:150px;" data-options="valueField:'country_id',textField:'country',url:'db_connection/get_country.php',method:'get',
                         onSelect: function(){
-                        alert($('#country').combobox('getValue'));
                         loadcity($('#country').combobox('getValue'));
                         }">
                     </div>
                     <div calss="fitem">
                         <label>Город:</label>
-                        <input id="city" class="easyui-combobox" name="state" style="width:150px;" data-options="
-                        valueField:'city_id',
-                        textField:'city',
-                      >
+                        <input id="city" class="easyui-combobox" name="state" style="width:150px;">
                     </div>
                 </div>
             </div>
