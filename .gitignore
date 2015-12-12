@@ -2,6 +2,9 @@
 Thumbs.db
 ehthumbs.db
 
+# Folders
+Bootstrap3/
+js/easyui/
 # Folder config file
 Desktop.ini
 
