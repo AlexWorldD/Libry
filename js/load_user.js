@@ -17,6 +17,17 @@ function load_user(it)
                 $('#l_name').val(data[0].last_name);
                 $('#age').val(data[0].age);
                 $('#sex').val(data[0].sex);
+                $('#email').val(data[0].email);
+                $('#phone').val(data[0].phone);
+                $('#country').combobox('select',data[0].country_id );
+                $('#city').combobox('setValue',data[0].city );
+                $('#user_address').val(data[0].address);
+                $('#address').html('');
+                $('#address').append(
+                    '<br><strong>'+data[0].country+'</strong>,  '+data[0].city+'<br>'+
+                    data[0].address+'<br>'+data[0].address2
+                );
+
             }
         }
     )

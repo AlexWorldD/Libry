@@ -126,3 +126,6 @@ h4 > #user {
         margin-right: 0;
     }
 }
+#user_ad_ed {
+    z-index: -1;
+}

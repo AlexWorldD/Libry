@@ -10,7 +10,7 @@ include_once 'db_connection/functions.php';
 sec_session_start(); // start secure session
 ?>
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,6 +30,7 @@ sec_session_start(); // start secure session
     <script type="text/JavaScript" src="js/sha512.js"></script>
     <script type="text/JavaScript" src="js/loadcity.js"></script>
     <script type="text/JavaScript" src="js/load_user.js"></script>
+    <script type="text/JavaScript" src="js/edit_user.js"></script>
     <script type="text/JavaScript" src="js/hash_functions.js"></script>
 </head>
 <body>
@@ -77,44 +78,54 @@ sec_session_start(); // start secure session
     <div id="page-content-wrapper">
         <div class="container-fluid col-md-10 col-md-offset-1 col-xs-12">
             <div class="row">
-                <div class="col-md-6 col-md-offset-6">
-                    <h1 class="text-center">Profile</h1>
+                <div class="col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
+                    <h1 class="text-center">Profile <button type="button" class="btn btn-default"
+                                                            onclick="edit_user()"><span class="glyphicon glyphicon-pencil" aria-hidden="true">
+                        </button></h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="panel panel-default">
-                        <div class="panel-heading">Персональная информация <button type="button" class="btn btn-default"
-                                                                                   onclick="load_user(<?php echo htmlentities($_SESSION['user_id']); ?>)">Put</button> </div>
+                        <div class="panel-heading">Персональная информация
+                            <button type="button" class="btn btn-default"
+                                    onclick="load_user(<?php echo htmlentities($_SESSION['user_id']); ?>)">Put
+                            </button>
+                        </div>
                         <div class="panel-body">
 
                             <div class="row">
-                                <div class="col-md-5">
+                                <div class="col-md-5 col-xs-5">
                                     <div class="input-group">
                                         <span class="input-group-addon">Имя</span>
-                                        <input type="text" class="form-control" placeholder="" id="f_name">
+                                        <input type="text" class="form-control" placeholder="" id="f_name" disabled>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-md-offset-1">
+                                <div class="col-md-6 col-md-offset-1 ">
                                     <div class="input-group">
                                         <span class="input-group-addon">Фамилия</span>
-                                        <input type="text" class="form-control" placeholder="" id="l_name">
+                                        <input type="text" class="form-control" placeholder="" id="l_name" disabled>
                                     </div>
                                 </div>
                             </div>
                             <br>
-<br>
+                            <br>
+
                             <div class="row">
-                                <div class="col-md-5">
+                                <div class="col-md-5 col-xs-5">
                                     <div class="input-group">
                                         <span class="input-group-addon">Пол</span>
-                                        <input type="text" class="form-control" placeholder="" id="sex">
+                                        <select type="text" class="form-control" id="sex" disabled>
+                                            <option></option>
+                                            <option value="M">М</option>
+                                            <option value="F">Ж</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-md-offset-1">
+                                <div class="col-md-6 col-md-offset-1 col-xs-6 col-md-offset-1">
                                     <div class="input-group">
                                         <span class="input-group-addon">Возраст </span>
-                                        <input type="text" class="form-control" placeholder="" id="age">
+                                        <input type="text" class="form-control"  id="age" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -124,30 +135,84 @@ sec_session_start(); // start secure session
                     </div>
                 </div>
             </div>
+            <br>
+            <!-- Contact info tab -->
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Контактная информация</div>
+                        <div class="panel-body">
 
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@</span>
+                                        <input type="text" class="form-control" placeholder="" id="email" disabled>
+                                    </div>
+                                    <br>
 
-        </div>
-<!--
-        <form class="form-horizontal" role="form" method="post">
-            <div class="form-group">
-                <div class="col-sm-4">
-                    <div calss="fitem">
-                        <label>Страна:</label>
-                        <input id="country" class="easyui-combobox" name="state" style="width:150px;" data-options="valueField:'country_id',textField:'country',url:'db_connection/get_country.php',method:'get',
-                        onSelect: function(){
-                        loadcity($('#country').combobox('getValue'));
-                        }">
-                    </div>
-                    <div calss="fitem">
-                        <label>Город:</label>
-                        <input id="city" class="easyui-combobox" name="state" style="width:150px;">
+                                    <div class="input-group">
+                                    <span class="input-group-addon"><span
+                                            class="glyphicon glyphicon-phone"></span></span>
+                                        <input type="text" class="form-control" placeholder="" id="phone" disabled>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5 col-md-offset-1" id="user_ad">
+                                    <address id="address">
+                                    </address>
+                                </div>
+
+                                <!--Edited field for address -->
+                                <div class="col-md-5 col-md-offset-1" id="user_ad_ed">
+                                   <div class="row" >
+                                       <form class="form-horizontal" role="form" method="post">
+                                           <div class="form-group">
+                                                       <label>Страна:</label>
+                                                       <input id="country" class="easyui-combobox" name="state" style="width:150px;" data-options="valueField:'country_id',textField:'country',url:'db_connection/get_country.php',method:'get',
+                                onSelect: function(){
+                                if (!this.disabled) {
+                                loadcity($('#country').combobox('getValue'));
+                                }}">
+                                                       <label>Город:</label>
+                                                       <input id="city" class="easyui-combobox" name="state" style="width:110px;">
+                                           </div>
+                                       </form>
+                                </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Адрес</span>
+                                        <input type="text" class="form-control"  id="user_address">
+                                    </div>
+                                 </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </form>
-    </div>
--->
-    <!-- /#page-content-wrapper -->
+
+
+        </div>
+
+        <!--
+                <form class="form-horizontal" role="form" method="post">
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <div calss="fitem">
+                                <label>Страна:</label>
+                                <input id="country" class="easyui-combobox" name="state" style="width:150px;" data-options="valueField:'country_id',textField:'country',url:'db_connection/get_country.php',method:'get',
+                                onSelect: function(){
+                                loadcity($('#country').combobox('getValue'));
+                                }">
+                            </div>
+                            <div calss="fitem">
+                                <label>Город:</label>
+                                <input id="city" class="easyui-combobox" name="state" style="width:150px;">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        -->
+        <!-- /#page-content-wrapper -->
         <script>
             $("#menu-toggle").click(function (e) {
                 e.preventDefault();
