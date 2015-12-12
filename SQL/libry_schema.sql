@@ -164,6 +164,9 @@ CREATE TABLE rental (
 	CONSTRAINT fk_rental_user_from FOREIGN KEY (user_from) REFERENCES user (user_id) ON DELETE RESTRICT ON UPDATE CASCADE,
 	CONSTRAINT fk_rental_user_to FOREIGN KEY (user_to) REFERENCES user (user_id) ON DELETE RESTRICT ON UPDATE CASCADE
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+--
+-- Triggers
+--
 DELIMITER $$
 CREATE TRIGGER update_count_writing_insert AFTER INSERT ON book
 FOR EACH ROW
