@@ -31,6 +31,7 @@ sec_session_start(); // start secure session
     <script type="text/JavaScript" src="js/loadcity.js"></script>
     <script type="text/JavaScript" src="js/load_user.js"></script>
     <script type="text/JavaScript" src="js/edit_user.js"></script>
+    <script type="text/JavaScript" src="js/user_functions.js"></script>
     <script type="text/JavaScript" src="js/hash_functions.js"></script>
 </head>
 <body>
@@ -79,7 +80,7 @@ sec_session_start(); // start secure session
         <div class="container-fluid col-md-10 col-md-offset-1 col-xs-12">
             <div class="row">
                 <div class="col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
-                    <h1 class="text-center">Profile <button type="button" class="btn btn-default"
+                    <h1 class="text-center">Profile <button type="button" class="btn btn-link"
                                                             onclick="edit_user()"><span class="glyphicon glyphicon-pencil" aria-hidden="true">
                         </button></h1>
                 </div>
@@ -227,7 +228,21 @@ sec_session_start(); // start secure session
                         </div>
                     </div>
                 </div>
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="..." >
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary" id="bts" onclick="user_save(<?php echo htmlentities($_SESSION['user_id']); ?>)" disabled>Сохранить</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-link" id="btc" onclick="user_cancel(<?php echo htmlentities($_SESSION['user_id']); ?>)" disabled>Отмена</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+            </div>
+
 
 
         </div>
