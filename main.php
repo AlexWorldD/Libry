@@ -100,12 +100,12 @@ sec_session_start(); // start secure session
                                    >
                                 <thead>
                                 <tr>
-                                    <th field="id" width="0" hidden="true"> </th>
+                                    <th field="writing_id" width="0" hidden="true"> </th>
                                     <th field="title" width="35%" align="center">Название</th>
-                                    <th field="last_name" width="15%"></th>
-                                    <th field="first_name" width="20" align="center">Автор</th>
+                                    <th field="last_name" width="15%" sortable="true">Автор</th>
+                                    <th field="first_name" width="20" align="center"></th>
                                     <th field="patronymic" width="20%"></th>
-                                    <th field="numbers" width="10%" align="center">Количество</th>
+                                    <th field="numbers" width="10%" align="center" sortable="true" order="desc">Количество</th>
                                 </tr>
                                 </thead>
                             </table>
