@@ -55,10 +55,10 @@ sec_session_start(); // start secure session
                 </div>
             </li>
             <li>
-                <a href="#">Main</a>
+                <a href="main.php">Main</a>
             </li>
             <li>
-                <a href="mybooks.php">My books</a>
+                <a href="#">My books</a>
             </li>
             <li>
                 <a href="favorite.php">Favorites</a>
@@ -83,7 +83,7 @@ sec_session_start(); // start secure session
         <div class="container-fluid col-md-10 col-md-offset-1 col-xs-12">
             <div class="row">
                 <div class="col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
-                    <h2 class="text-center">Main <span class="glyphicon glyphicon-star" aria-hidden="true">
+                    <h2 class="text-center">My Books <span class="glyphicon glyphicon-home" aria-hidden="true">
                     </h2>
                 </div>
 
@@ -97,9 +97,8 @@ sec_session_start(); // start secure session
 
                         </div>
                         <div class="panel-body">
-                            <!--
-                            <table id="t_books" class="easyui-datagrid" style="height:550px"
-                                   url="db_connection/load_books.php"
+                            <table id="t_my_books" class="easyui-datagrid" style="height:550px"
+                                   url="db_connection/load_my_books.php?user_id=<?php echo htmlentities($_SESSION['user_id']); ?>"
                                    striped="true"
                                    toolbar="#toolbar" pagination="true"
                                    rownumbers="true" fitColumns="true" singleSelect="true"
@@ -111,13 +110,12 @@ sec_session_start(); // start secure session
                                     <th field="last_name" width="15%" sortable="true">Автор</th>
                                     <th field="first_name" width="20" align="center"></th>
                                     <th field="patronymic" width="20%"></th>
-                                    <th field="numbers" width="10%" align="center" sortable="true" order="desc">
-                                        Количество
+                                    <th field="page_num" width="10%" align="center" sortable="true" order="desc">
+                                        Страниц
                                     </th>
                                 </tr>
                                 </thead>
                             </table>
-                            -->
                         </div>
                     </div>
                 </div>
@@ -134,28 +132,29 @@ sec_session_start(); // start secure session
 
                         <div class="col-md-10 col-md-offset-1">
                             <div class="row">
-                                <h4 class="modal-title" ><span id="title_book"> </span> &nbsp; <span id="fav_star"><span class="glyphicon glyphicon-star-empty text-muted" disabled></span></h4>
+                                <h4 class="modal-title" ><span id="title_book"> </span></h4>
                                 <h4 class="modal-title text-muted" id="release_y"></h4>
 
                             </div>
 
                         </div>
                     </div>
-                    <div class="modal-body" id="descrip_book">
+                    <div class="modal-body text-justify" id="descrip_book">
                     </div>
                     <div class="modal-footer">
+                        <!--
                         <div class="row">
                             <div id="b_msg" class="alert alert-success alert-dismissable text-center" hidden>
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            Книга добавлена!
-                        </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                Книга добавлена!
+                            </div>
                             <div id="b_msg_war" class="alert alert-warning alert-dismissable text-center" hidden>
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                 Книга уже в вашем списке Favorites!
                             </div>
-                        <button type="button" class="btn btn-primary- btn-link" onclick="add_fav(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add to <span class="glyphicon glyphicon-star-empty"></span></button>
+                            <button type="button" class="btn btn-primary- btn-link" onclick="add_fav(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add to <span class="glyphicon glyphicon-star-empty"></span></button>
                         </div>
-
+                        -->
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->

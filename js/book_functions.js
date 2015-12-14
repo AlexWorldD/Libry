@@ -37,6 +37,9 @@ $(document).ready(function () {
             });
             $('#b_msg_war').attr("hidden", true);
             $('#b_msg').attr("hidden", true);
+            $('#fav_star').empty();
+            $('#fav_star').append("<span class='glyphicon glyphicon-star-empty text-muted' disabled>");
+            $('#b_msg').attr("hidden", true);
             $("#m_show_book").modal('show');
 
         }
@@ -68,3 +71,47 @@ function add_fav(user_id) {
         }
     });
 }
+// Function for show my books
+$(document).ready(function () {
+    $('#t_my_books').datagrid({
+        onDblClickRow: function (index, row) {
+
+
+            $('#title_book').empty();
+            $('#title_book').append(
+                "<b>" + row.title + "</b>"
+            );
+            writing_id = row.writing_id;
+            // AJAX for additional info about selected book
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8080/bd/db_connection/book_info.php",
+                dataType: "json",
+                data: "writing_id=" + row.writing_id + "&user_id=" + user_id,
+                error: function () {
+                    alert("Error with second AJAX!");
+                },
+                success: function (data) {
+                    $('#release_y').empty();
+                    $('#release_y').append(
+                        data[0].release_year
+                    );
+                    $('#descrip_book').empty();
+                    $('#descrip_book').append(
+                        data[0].description
+                    );
+
+
+                }
+            });
+            $('#b_msg_war').attr("hidden", true);
+            $('#b_msg').attr("hidden", true);
+            $('#fav_star').empty();
+            $('#fav_star').append("<span class='glyphicon glyphicon-star-empty text-muted' disabled>");
+            $('#b_msg').attr("hidden", true);
+            $("#m_show_book").modal('show');
+
+        }
+    });
+
+});

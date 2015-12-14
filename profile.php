@@ -57,13 +57,13 @@ sec_session_start(); // start secure session
                 <a href="main.php">Main</a>
             </li>
             <li>
-                <a href="#">My books</a>
+                <a href="mybooks.php">My books</a>
             </li>
             <li>
-                <a href="#">Favorites</a>
+                <a href="favorite.php">Favorites</a>
             </li>
             <li>
-                <a href="#">Libry's books</a>
+                <a href="books.php">Libry's books</a>
             </li>
             <li>
                 <a href="#">My rentals</a>

@@ -55,7 +55,7 @@ sec_session_start(); // start secure session
                 </div>
             </li>
             <li>
-                <a href="#">Main</a>
+                <a href="main.php">Main</a>
             </li>
             <li>
                 <a href="mybooks.php">My books</a>
@@ -64,7 +64,7 @@ sec_session_start(); // start secure session
                 <a href="favorite.php">Favorites</a>
             </li>
             <li>
-                <a href="books.php">Libry's books</a>
+                <a href="#">Libry's books</a>
             </li>
             <li>
                 <a href="#">My rentals</a>
@@ -83,7 +83,7 @@ sec_session_start(); // start secure session
         <div class="container-fluid col-md-10 col-md-offset-1 col-xs-12">
             <div class="row">
                 <div class="col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
-                    <h2 class="text-center">Main <span class="glyphicon glyphicon-star" aria-hidden="true">
+                    <h2 class="text-center">Libry's Books <span class="glyphicon glyphicon-book" aria-hidden="true">
                     </h2>
                 </div>
 
@@ -97,7 +97,6 @@ sec_session_start(); // start secure session
 
                         </div>
                         <div class="panel-body">
-                            <!--
                             <table id="t_books" class="easyui-datagrid" style="height:550px"
                                    url="db_connection/load_books.php"
                                    striped="true"
@@ -117,7 +116,6 @@ sec_session_start(); // start secure session
                                 </tr>
                                 </thead>
                             </table>
-                            -->
                         </div>
                     </div>
                 </div>
@@ -141,19 +139,19 @@ sec_session_start(); // start secure session
 
                         </div>
                     </div>
-                    <div class="modal-body" id="descrip_book">
+                    <div class="modal-body text-justify" id="descrip_book">
                     </div>
                     <div class="modal-footer">
                         <div class="row">
                             <div id="b_msg" class="alert alert-success alert-dismissable text-center" hidden>
-                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                            Книга добавлена!
-                        </div>
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                Книга добавлена!
+                            </div>
                             <div id="b_msg_war" class="alert alert-warning alert-dismissable text-center" hidden>
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                 Книга уже в вашем списке Favorites!
                             </div>
-                        <button type="button" class="btn btn-primary- btn-link" onclick="add_fav(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add to <span class="glyphicon glyphicon-star-empty"></span></button>
+                            <button type="button" class="btn btn-primary- btn-link" onclick="add_fav(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add to <span class="glyphicon glyphicon-star-empty"></span></button>
                         </div>
 
                     </div>
