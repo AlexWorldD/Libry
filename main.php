@@ -132,7 +132,7 @@ sec_session_start(); // start secure session
 
                         <div class="col-md-10 col-md-offset-1">
                             <div class="row">
-                                <h4 class="modal-title" ><span id="title_book"> </span> &nbsp; <span class="glyphicon glyphicon-star-empty text-muted" disabled></h4>
+                                <h4 class="modal-title" ><span id="title_book"> </span> &nbsp; <span id="fav_star"><span class="glyphicon glyphicon-star-empty text-muted" disabled></span></h4>
                                 <h4 class="modal-title text-muted" id="release_y"></h4>
 
                             </div>
@@ -142,13 +142,23 @@ sec_session_start(); // start secure session
                     <div class="modal-body" id="descrip_book">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary- btn-link">Add to <span class="glyphicon glyphicon-star-empty"></span></button>
+                        <div class="row">
+                            <div id="b_msg" class="alert alert-success alert-dismissable text-center" hidden>
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            Книга добавлена!
+                        </div>
+                            <div id="b_msg_war" class="alert alert-warning alert-dismissable text-center" hidden>
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                Книга уже в вашем списке Favorites!
+                            </div>
+                        <button type="button" class="btn btn-primary- btn-link" onclick="add_fav(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add to <span class="glyphicon glyphicon-star-empty"></span></button>
+                        </div>
+
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </div>
-
 
     <!-- /#page-content-wrapper -->
     <script>
