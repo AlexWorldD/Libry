@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Алексей
- * Date: 11.12.2015
- * Time: 21:30
+ * Date: 14.12.2015
+ * Time: 21:37
  */
 include_once 'db_connection/bd_connect_secure.php';
 include_once 'db_connection/functions.php';
@@ -58,10 +58,10 @@ sec_session_start(); // start secure session
                 <a href="main.php">Main</a>
             </li>
             <li>
-                <a href="#">My books</a>
+                <a href="mybooks.php">My books</a>
             </li>
             <li>
-                <a href="favorite.php">Favorites</a>
+                <a href="#">Favorites</a>
             </li>
             <li>
                 <a href="books.php">Libry's books</a>
@@ -83,7 +83,7 @@ sec_session_start(); // start secure session
         <div class="container-fluid col-md-10 col-md-offset-1 col-xs-12">
             <div class="row">
                 <div class="col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
-                    <h2 class="text-center">My Books <span class="glyphicon glyphicon-home" aria-hidden="true">
+                    <h2 class="text-center">Favorites <span class="glyphicon glyphicon-star" aria-hidden="true">
                     </h2>
                 </div>
 
@@ -98,7 +98,7 @@ sec_session_start(); // start secure session
                         </div>
                         <div class="panel-body">
                             <table id="t_my_books" class="easyui-datagrid" style="height:550px"
-                                   data-options="url: 'db_connection/load_my_books.php?user_id=<?php echo htmlentities($_SESSION['user_id']); ?>',
+                                   data-options="url: 'db_connection/load_favorite_books.php?user_id=<?php echo htmlentities($_SESSION['user_id']); ?>',
                                    striped: 'true',
                                    toolbar: 'toolbar', pagination: 'true',
                                    rownumbers: 'true', fitColumns: 'true', singleSelect: 'true'"
@@ -110,8 +110,8 @@ sec_session_start(); // start secure session
                                     <th field="last_name" width="15%" sortable="true">Автор</th>
                                     <th field="first_name" width="20" align="center"></th>
                                     <th field="patronymic" width="20%"></th>
-                                    <th field="page_num" width="10%" align="center" sortable="true" order="desc">
-                                        Страниц
+                                    <th field="user_id" width="10%" align="center" sortable="true" order="desc">
+                                        Наличие
                                     </th>
                                 </tr>
                                 </thead>

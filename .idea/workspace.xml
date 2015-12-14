@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="Add myBooks page.">
+    <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="fix">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_connection/load_favorite_books.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/favorite.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/book_functions.js" afterPath="$PROJECT_DIR$/js/book_functions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mybooks.php" afterPath="$PROJECT_DIR$/mybooks.php" />
     </list>
     <ignored path="StudID.iws" />
@@ -38,16 +39,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/error.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.064516">
-              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profile.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,11 +59,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mybooks.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mybooks.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mybooks.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4384018">
-              <caret line="129" column="41" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
+            <state vertical-scroll-proportion="3.548387">
+              <caret line="4" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favorite.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/favorite.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7069922">
+              <caret line="112" column="54" selection-start-line="112" selection-start-column="54" selection-end-line="112" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -81,8 +82,8 @@
       <file leaf-file-name="load_my_books.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db_connection/load_my_books.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.193548">
-              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+            <state vertical-scroll-proportion="-23.419355">
+              <caret line="48" column="55" selection-start-line="29" selection-start-column="34" selection-end-line="48" selection-end-column="55" />
               <folding>
                 <marker date="1450107589734" expanded="true" signature="563:611" placeholder="SELECT count..common_books..." />
                 <marker date="1450107589734" expanded="true" signature="563:612" placeholder="SELECT count..common_books..." />
@@ -93,13 +94,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_functions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/user_functions.js">
+      <file leaf-file-name="load_favorite_books.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db_connection/load_favorite_books.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="102" selection-start-line="21" selection-start-column="102" selection-end-line="21" selection-end-column="102" />
+            <state vertical-scroll-proportion="-20.548388">
+              <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
               <folding>
-                <element signature="n#!!doc;n#user_cancel#0" expanded="false" />
+                <marker date="1450119215994" expanded="true" signature="563:608" placeholder="SELECT count..want_read..." />
+                <marker date="1450119215994" expanded="true" signature="848:1332" placeholder="SELECT t1.wr..writing_id..." />
+                <marker date="1450119215994" expanded="true" signature="954:1093" placeholder="SELECT writi..book..." />
               </folding>
             </state>
           </provider>
@@ -165,8 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/sha512.js" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/Login/db_connect.php" />
         <option value="$PROJECT_DIR$/error.php" />
         <option value="$PROJECT_DIR$/register.php" />
@@ -214,8 +215,10 @@
         <option value="$PROJECT_DIR$/profile.php" />
         <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/books.php" />
-        <option value="$PROJECT_DIR$/mybooks.php" />
         <option value="$PROJECT_DIR$/js/book_functions.js" />
+        <option value="$PROJECT_DIR$/mybooks.php" />
+        <option value="$PROJECT_DIR$/db_connection/load_favorite_books.php" />
+        <option value="$PROJECT_DIR$/favorite.php" />
       </list>
     </option>
   </component>
@@ -557,7 +560,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450108686667</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="fix">
+      <created>1450117750983</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1450117750983</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -629,7 +638,8 @@
     <MESSAGE value="Start adding Favorites." />
     <MESSAGE value="Add Favorites book function." />
     <MESSAGE value="Add myBooks page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add myBooks page." />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -639,24 +649,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db_connection/register.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="61" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
-          <folding>
-            <marker date="1449794523734" expanded="true" signature="1044:1095" placeholder="SELECT id FR..members..." />
-            <marker date="1449794523734" expanded="true" signature="1868:1967" placeholder="INSERT INTO user..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/register_success.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/error.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1023,19 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db_connection/load_my_books.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.193548">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding>
-            <marker date="1450107589734" expanded="true" signature="563:611" placeholder="SELECT count..common_books..." />
-            <marker date="1450107589734" expanded="true" signature="563:612" placeholder="SELECT count..common_books..." />
-            <marker date="1450107589734" expanded="true" signature="851:1367" placeholder="SELECT t1.wr..writing_id..." />
-            <marker date="1450107589734" expanded="true" signature="958:1128" placeholder="SELECT writi..book..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/profile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.645162">
@@ -1087,8 +1066,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mybooks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4384018">
-          <caret line="129" column="41" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
+        <state vertical-scroll-proportion="3.548387">
+          <caret line="4" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_connection/load_my_books.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.419355">
+          <caret line="48" column="55" selection-start-line="29" selection-start-column="34" selection-end-line="48" selection-end-column="55" />
+          <folding>
+            <marker date="1450107589734" expanded="true" signature="563:611" placeholder="SELECT count..common_books..." />
+            <marker date="1450107589734" expanded="true" signature="563:612" placeholder="SELECT count..common_books..." />
+            <marker date="1450107589734" expanded="true" signature="851:1367" placeholder="SELECT t1.wr..writing_id..." />
+            <marker date="1450107589734" expanded="true" signature="958:1128" placeholder="SELECT writi..book..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db_connection/load_favorite_books.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.548388">
+          <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+          <folding>
+            <marker date="1450119215994" expanded="true" signature="563:608" placeholder="SELECT count..want_read..." />
+            <marker date="1450119215994" expanded="true" signature="848:1332" placeholder="SELECT t1.wr..writing_id..." />
+            <marker date="1450119215994" expanded="true" signature="954:1093" placeholder="SELECT writi..book..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/favorite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7069922">
+          <caret line="112" column="54" selection-start-line="112" selection-start-column="54" selection-end-line="112" selection-end-column="54" />
           <folding />
         </state>
       </provider>
