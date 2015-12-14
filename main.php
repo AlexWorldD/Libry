@@ -33,7 +33,8 @@ sec_session_start(); // start secure session
     <script type="text/JavaScript" src="js/edit_user.js"></script>
     <script type="text/JavaScript" src="js/user_functions.js"></script>
     <script type="text/JavaScript" src="js/hash_functions.js"></script>
-</head>
+    <script type="text/JavaScript" src="js/book_functions.js"></script>
+
 <body>
 
 <div id="wrapper">
@@ -85,27 +86,45 @@ sec_session_start(); // start secure session
                     <h2 class="text-center">Libry's Books <span class="glyphicon glyphicon-book" aria-hidden="true">
                     </h2>
                 </div>
+
             </div>
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="panel panel-default">
+
                         <div class="panel-heading">
+
+
                         </div>
                         <div class="panel-body">
-                            <table id="t_bools" class="easyui-datagrid" style="height:550px"
+                            <div class="row">
+                                <!-- Button trigger modal
+                                <a data-toggle="modal" href="#m_show_book" class="col-md-offset-10" >Подробнее</a>
+                                -->
+
+                                <div class="btn-group pull-right">
+                                    <button type="button" class="btn btn-link" id="show_m">Левая</button>
+                                    <button type="button" class="btn btn-link">Правая</button>
+                                </div>
+
+
+                            </div>
+                            <table id="t_books" class="easyui-datagrid" style="height:550px"
                                    url="db_connection/load_books.php"
                                    striped="true"
                                    toolbar="#toolbar" pagination="true"
                                    rownumbers="true" fitColumns="true" singleSelect="true"
-                                   >
+                            >
                                 <thead>
                                 <tr>
-                                    <th field="writing_id" width="0" hidden="true"> </th>
+                                    <th field="writing_id" width="0" hidden="true"></th>
                                     <th field="title" width="35%" align="center">Название</th>
                                     <th field="last_name" width="15%" sortable="true">Автор</th>
                                     <th field="first_name" width="20" align="center"></th>
                                     <th field="patronymic" width="20%"></th>
-                                    <th field="numbers" width="10%" align="center" sortable="true" order="desc">Количество</th>
+                                    <th field="numbers" width="10%" align="center" sortable="true" order="desc">
+                                        Количество
+                                    </th>
                                 </tr>
                                 </thead>
                             </table>
@@ -115,18 +134,41 @@ sec_session_start(); // start secure session
             </div>
             <br>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="m_show_book" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="row">
+                                <h4 class="modal-title" id="title_book"></h4>
+                                <h4 class="modal-title text-muted" id="release_y"></h4>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-body" id="descrip_book">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary- btn-link">Add to <span class="glyphicon glyphicon-star-empty"></span></button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </div>
 
 
-
-        <!-- /#page-content-wrapper -->
-        <script>
-            $("#menu-toggle").click(function (e) {
-                e.preventDefault();
-                $("#wrapper").toggleClass("toggled");
-            });
-        </script>
+    <!-- /#page-content-wrapper -->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
 </div>
 </body>
 </html>

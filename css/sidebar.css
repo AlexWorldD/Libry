@@ -126,3 +126,8 @@ h4 > #user {
         margin-right: 0;
     }
 }
+#m_show_book {
+    top:20%;
+
+    outline: none;
+}
