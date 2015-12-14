@@ -132,7 +132,7 @@ sec_session_start(); // start secure session
 
                         <div class="col-md-10 col-md-offset-1">
                             <div class="row">
-                                <h4 class="modal-title" id="title_book"></h4>
+                                <h4 class="modal-title" ><span id="title_book"> </span> &nbsp; <span class="glyphicon glyphicon-star-empty text-muted" disabled></h4>
                                 <h4 class="modal-title text-muted" id="release_y"></h4>
 
                             </div>
