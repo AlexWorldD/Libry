@@ -165,6 +165,7 @@ sec_session_start(); // start secure session
                             <br>
                             <br>
                             <!-- TODO Change select to combobox for city and country -->
+                            <!-- TODO Look autocomplete for address in one input http://habrahabr.ru/post/214945/ -->
                             <div class="row">
                                 <div class="col-md-5 col-xs-5">
                                     <div class="input-group">

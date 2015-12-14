@@ -127,3 +127,6 @@ $(document).ready(function () {
     });
 
 });
+function add_book(user_id) {
+    $("#add_book").modal('show');
+}

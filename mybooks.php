@@ -93,7 +93,12 @@ sec_session_start(); // start secure session
                     <div class="panel panel-default">
 
                         <div class="panel-heading">
-
+                           <div class="text-right" >
+                               <div class="row">
+                                   <button type="button" class="btn btn-primary- btn-link" onclick="">XML export <span class="glyphicon glyphicon-floppy-save"></span></button>
+                                   <button type="button" class="btn btn-primary- btn-link" onclick="add_book(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add <span class="glyphicon glyphicon-plus"></span></button>
+                               </div>
+                           </div>
 
                         </div>
                         <div class="panel-body">
@@ -148,6 +153,84 @@ sec_session_start(); // start secure session
                         </div>
                     </div>
                     <div class="modal-body text-justify" id="descrip_book">
+                    </div>
+                    <div class="modal-footer">
+                        <!--
+                        <div class="row">
+                            <div id="b_msg" class="alert alert-success alert-dismissable text-center" hidden>
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                Книга добавлена!
+                            </div>
+                            <div id="b_msg_war" class="alert alert-warning alert-dismissable text-center" hidden>
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                Книга уже в вашем списке Favorites!
+                            </div>
+                            <button type="button" class="btn btn-primary- btn-link" onclick="add_fav(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add to <span class="glyphicon glyphicon-star-empty"></span></button>
+                        </div>
+                        -->
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- SECOND MODAL WINDOW -->
+        <!-- Modal -->
+        <div class="modal fade" id="add_book" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="row text-center">
+                                <h4>Добавить книгу</h4>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="modal-body text-justify">
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-left">Основная информация
+                                <!--
+                                <button type="button" class="btn btn-default"
+                                        onclick="load_user(<?php echo htmlentities($_SESSION['user_id']); ?>)">Put
+                                </button>
+                                -->
+                            </div>
+                            <div class="panel-body">
+
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-5">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Название</span>
+                                            <input type="text" class="form-control" placeholder="" id="add_title">
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+
+                                <div class="row">
+                                    <div class="col-md-5 col-xs-5">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Пол</span>
+                                            <select type="text" class="form-control" id="sex">
+                                                <option></option>
+                                                <option value="M">М</option>
+                                                <option value="F">Ж</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-md-offset-1 col-xs-6 col-md-offset-1">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Возраст </span>
+                                            <input type="text" class="form-control" id="age">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <!--
