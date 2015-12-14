@@ -97,18 +97,6 @@ sec_session_start(); // start secure session
 
                         </div>
                         <div class="panel-body">
-                            <div class="row">
-                                <!-- Button trigger modal
-                                <a data-toggle="modal" href="#m_show_book" class="col-md-offset-10" >Подробнее</a>
-                                -->
-
-                                <div class="btn-group pull-right">
-                                    <button type="button" class="btn btn-link" id="show_m">Левая</button>
-                                    <button type="button" class="btn btn-link">Правая</button>
-                                </div>
-
-
-                            </div>
                             <table id="t_books" class="easyui-datagrid" style="height:550px"
                                    url="db_connection/load_books.php"
                                    striped="true"
