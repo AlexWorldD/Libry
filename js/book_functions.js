@@ -96,6 +96,18 @@ $(document).ready(function () {
                     $('#release_y').append(
                         data[0].release_year
                     );
+                    $('#l_n').empty();
+                    $('#l_n').append(
+                        row.last_name
+                    );
+                    $('#f_n').empty();
+                    $('#f_n').append(
+                        row.first_name
+                    );
+                    $('#pat').empty();
+                    $('#pat').append(
+                        row.patronymic
+                    );
                     $('#descrip_book').empty();
                     $('#descrip_book').append(
                         data[0].description

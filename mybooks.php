@@ -98,10 +98,10 @@ sec_session_start(); // start secure session
                         </div>
                         <div class="panel-body">
                             <table id="t_my_books" class="easyui-datagrid" style="height:550px"
-                                   url="db_connection/load_my_books.php?user_id=<?php echo htmlentities($_SESSION['user_id']); ?>"
-                                   striped="true"
-                                   toolbar="#toolbar" pagination="true"
-                                   rownumbers="true" fitColumns="true" singleSelect="true"
+                                   data-options="url: 'db_connection/load_my_books.php?user_id=<?php echo htmlentities($_SESSION['user_id']); ?>',
+                                   striped: 'true',
+                                   toolbar: 'toolbar', pagination: 'true',
+                                   rownumbers: 'true', fitColumns: 'true', singleSelect: 'true'"
                             >
                                 <thead>
                                 <tr>
@@ -132,8 +132,8 @@ sec_session_start(); // start secure session
 
                         <div class="col-md-10 col-md-offset-1">
                             <div class="row">
-                                <h4 class="modal-title" ><span id="title_book"> </span></h4>
-                                <h4 class="modal-title text-muted" id="release_y"></h4>
+                                <h4 class="modal-title text-center" ><span id="title_book"> </span> <span> &nbsp <span class="text-muted" id="release_y"></span> </span> </h4>
+                                <h4 class="modal-title"> <em><strong id="l_n"></strong> &nbsp <span id="f_n"></span> &nbsp <span id="pat"></span></em></h4>
 
                             </div>
 
