@@ -207,12 +207,11 @@ sec_session_start(); // start secure session
                                     <div class="col-md-12 col-xs-5">
                                         <div class="input-group">
                                             <span class="input-group-addon">Название</span>
-                                            <input type="text" class="form-control" id="add_title">
+                                            <input type="text" class="form-control" id="title"/>
                                         </div>
                                     </div>
                                 </div>
-                                <br>
-                                <input type="text" class="form-control" id="title"/>
+
                                 <br>
 
                                 <div class="row">

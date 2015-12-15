@@ -137,16 +137,12 @@ var countries = [
     // ...
     { value: 'Zimbabwe', data: 'ZZ' }
 ];
-var c=["Russia","Andorra"];
-//[{"value":"Afsdfa","data":"wtf"},{"value":"Basdfasdf","data":"wtf"}]
 
 $(function() {
     $('#title').devbridgeAutocomplete({
         serviceUrl: 'http://localhost:8080/bd/db_connection/get_title.php',
-        //lookup: c,
-        //minChars: 3,
         onSelect: function (suggestion) {
-            alert('You selected: ' + suggestion.value);
+            //alert('You selected: ' + suggestion.value);
         }
     });
 });
