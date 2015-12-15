@@ -130,19 +130,58 @@ $(document).ready(function () {
 });
 function add_book(id) {
     user_id = id;
+    $('#title').val('');
+    $('#add_l_n').val('');
+    $('#add_f_n').val('');
+    $('#add_pat').val('');
     $("#add_book").modal('show');
 }
-var countries = [
-    { value: 'Andorra', data: 'AD' },
-    // ...
-    { value: 'Zimbabwe', data: 'ZZ' }
-];
 
-$(function() {
+$(function () {
     $('#title').devbridgeAutocomplete({
         serviceUrl: 'http://localhost:8080/bd/db_connection/get_title.php',
+        preventBadQueries: true,
+        showNoSuggestionNotice: true,
         onSelect: function (suggestion) {
-            //alert('You selected: ' + suggestion.value);
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8080/bd/db_connection/get_author.php",
+                dataType: "json",
+                data: "writing_id=" + suggestion.data,
+                error: function () {
+                    alert("Error with second AJAX!");
+                },
+                success: function (data) {
+                    $('#add_l_n').val(data[0].last_name);
+
+                    $('#add_f_n').val(data[0].first_name);
+
+                    $('#add_pat').val(data[0].patronymic);
+                }
+            });
+        }
+    });
+});
+$(function () {
+    $('#add_l_n').devbridgeAutocomplete({
+        serviceUrl: 'http://localhost:8080/bd/db_connection/get_author.php',
+        preventBadQueries: true,
+        onSelect: function (suggestion) {
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8080/bd/db_connection/get_author.php",
+                dataType: "json",
+                data: "author_id=" + suggestion.data,
+                error: function () {
+                    alert("Error with second AJAX!");
+                },
+                success: function (data) {
+
+                    $('#add_f_n').val(data[0].first_name);
+
+                    $('#add_pat').val(data[0].patronymic);
+                }
+            });
         }
     });
 });

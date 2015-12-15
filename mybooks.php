@@ -96,12 +96,15 @@ sec_session_start(); // start secure session
                     <div class="panel panel-default">
 
                         <div class="panel-heading">
-                           <div class="text-right" >
-                               <div class="row">
-                                   <button type="button" class="btn btn-primary- btn-link" onclick="">XML export <span class="glyphicon glyphicon-floppy-save"></span></button>
-                                   <button type="button" class="btn btn-primary- btn-link" onclick="add_book(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add <span class="glyphicon glyphicon-plus"></span></button>
-                               </div>
-                           </div>
+                            <div class="text-right">
+                                <div class="row">
+                                    <button type="button" class="btn btn-primary- btn-link" onclick="">XML export <span
+                                            class="glyphicon glyphicon-floppy-save"></span></button>
+                                    <button type="button" class="btn btn-primary- btn-link"
+                                            onclick="add_book(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add
+                                        <span class="glyphicon glyphicon-plus"></span></button>
+                                </div>
+                            </div>
 
                         </div>
                         <div class="panel-body">
@@ -211,26 +214,27 @@ sec_session_start(); // start secure session
                                         </div>
                                     </div>
                                 </div>
+                                <br>
 
+                                <div id="no_title" class="alert alert-warning alert-dismissable text-center" hidden>
+                                    <button type="button" class="close" data-dismiss="alert"
+                                            aria-hidden="true">&times;</button>
+                                    Данной книги нет в нашей библиотеке! Пожалуйста, заполните дополнительную
+                                    информацию:
+                                </div>
                                 <br>
 
                                 <div class="row">
-                                    <div class="col-md-5 col-xs-5">
+                                    <div class="col-md-12 col-xs-12">
                                         <div class="input-group">
-                                            <span class="input-group-addon">Пол</span>
-                                            <select type="text" class="form-control" id="sex">
-                                                <option></option>
-                                                <option value="M">М</option>
-                                                <option value="F">Ж</option>
-                                            </select>
+                                            <span class="input-group-addon">Автор</span>
+                                            <input type="text" class="form-control" id="add_l_n" placeholder="Фамилия"/>
+                                            <input type="text" class="form-control" id="add_f_n" placeholder="Имя"/>
+                                            <input type="text" class="form-control" id="add_pat"
+                                                   placeholder="Отчество/Второе имя"/>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-md-offset-1 col-xs-6 col-md-offset-1">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">Возраст </span>
-                                            <input type="text" class="form-control" id="age">
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
