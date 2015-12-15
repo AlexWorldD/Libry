@@ -75,6 +75,16 @@ function add_fav(user_id) {
 // Function for show my books
 $(document).ready(function () {
     $('#t_my_books').datagrid({
+        /*
+        onDblClickCell: function(index, field, value) {
+            if (value!=0) {
+                alert('hi');
+            }
+            else {
+                alert('bb');
+            }
+        },
+        */
         onDblClickRow: function (index, row) {
 
 

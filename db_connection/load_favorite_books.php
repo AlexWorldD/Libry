@@ -27,16 +27,33 @@ if (!$tmp) {
 }
 // Get TOTAL nums of rows in our table.
 $result['total'] = mysqli_fetch_row($tmp)[0];
-$request = mysqli_query($mysqli, "select t2.writing_id, title, last_name, first_name, patronymic from (select writing.writing_id, title, last_name, first_name, patronymic FROM writing, author_writing, author WHERE writing.writing_id = author_writing.writing_id
-        AND author_writing.author_id = author.author_id) as t1, (SELECT
-            want_read.writing_id
-        FROM
-            writing
-                JOIN
-            want_read ON writing.writing_id = want_read.writing_id
-        WHERE
-            user_id = $user_id) as t2
-            where t1.writing_id=t2.writing_id $sorting LIMIT $offset,$n_rows");
+$request = mysqli_query($mysqli, "SELECT
+    t1.writing_id, title, last_name, first_name, patronymic, nums
+FROM
+    (SELECT
+        writing.writing_id, title, last_name, first_name, patronymic
+    FROM
+        writing, author_writing, author
+    WHERE
+        writing.writing_id = author_writing.writing_id
+            AND author_writing.author_id = author.author_id) AS t1,
+    (SELECT
+        want_read.writing_id
+    FROM
+        writing
+    JOIN want_read ON writing.writing_id = want_read.writing_id
+    WHERE
+        user_id =$user_id) AS t2,
+    (SELECT
+        writing_id, COUNT(user_id) AS nums
+    FROM
+        book, common_books
+    WHERE
+        book.book_id = common_books.book_id
+    GROUP BY writing_id) AS t3
+WHERE
+    t1.writing_id = t2.writing_id
+        AND t2.writing_id = t3.writing_id $sorting LIMIT $offset,$n_rows");
 if (!$request) {
     die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
     header('Location: ../error.php?err=Load failure: favorite books');

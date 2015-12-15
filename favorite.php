@@ -110,7 +110,7 @@ sec_session_start(); // start secure session
                                     <th field="last_name" width="15%" sortable="true">Автор</th>
                                     <th field="first_name" width="20" align="center"></th>
                                     <th field="patronymic" width="20%"></th>
-                                    <th field="user_id" width="10%" align="center" sortable="true" order="desc">
+                                    <th field="nums" width="10%" align="center" sortable="true" order="desc">
                                         Наличие
                                     </th>
                                 </tr>
@@ -150,6 +150,8 @@ sec_session_start(); // start secure session
                     <div class="modal-body text-justify" id="descrip_book">
                     </div>
                     <div class="modal-footer">
+
+
                         <!--
                         <div class="row">
                             <div id="b_msg" class="alert alert-success alert-dismissable text-center" hidden>

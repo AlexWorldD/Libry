@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="Add book-&gt;page ready. Require server part.">
+    <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="Fix Favorite book response.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_connection/load_favorite_books.php" afterPath="$PROJECT_DIR$/db_connection/load_favorite_books.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/favorite.php" afterPath="$PROJECT_DIR$/favorite.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/book_functions.js" afterPath="$PROJECT_DIR$/js/book_functions.js" />
     </list>
     <ignored path="StudID.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,18 +37,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_title.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db_connection/get_title.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-              <folding>
-                <marker date="1450141833059" expanded="true" signature="263:355" placeholder="SELECT title..writing..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="get_lang.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db_connection/get_lang.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,11 +64,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="book_functions.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="favorite.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/favorite.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-46.80645">
+              <caret line="148" column="26" selection-start-line="148" selection-start-column="26" selection-end-line="148" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="book_functions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/book_functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="161" column="54" selection-start-line="161" selection-start-column="54" selection-end-line="161" selection-end-column="54" />
+            <state vertical-scroll-proportion="-0.6609442">
+              <caret line="86" column="10" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
               <folding>
                 <element signature="e#0#44#0" expanded="false" />
               </folding>
@@ -86,17 +86,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="load_favorite_books.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="load_favorite_books.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db_connection/load_favorite_books.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2918979">
-              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+            <state vertical-scroll-proportion="-23.387096">
+              <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
               <folding>
-                <marker date="1450179745049" expanded="true" signature="563:608" placeholder="SELECT count..want_read..." />
-                <marker date="1450179745049" expanded="true" signature="848:1422" placeholder="select title..writing_id..." />
-                <marker date="1450179745049" expanded="true" signature="917:1130" placeholder="select writi..writing..." />
-                <marker date="1450179745049" expanded="true" signature="1140:1336" placeholder="SELECT want_..writing..." />
-                <marker date="1450179745049" expanded="true" signature="1140:1337" placeholder="SELECT want_..writing..." />
+                <marker date="1450180283237" expanded="true" signature="563:608" placeholder="SELECT count..want_read..." />
+                <marker date="1450180283237" expanded="true" signature="848:1620" placeholder="SELECT title..writing_id..." />
+                <marker date="1450180283237" expanded="true" signature="848:1644" placeholder="select title..writing_id..." />
+                <marker date="1450180283237" expanded="true" signature="931:1180" placeholder="SELECT writi..writing..." />
+                <marker date="1450180283237" expanded="true" signature="1194:1346" placeholder="SELECT want_..writing..." />
+                <marker date="1450180283237" expanded="true" signature="1194:1347" placeholder="SELECT want_..writing..." />
+                <marker date="1450180283237" expanded="true" signature="1368:1531" placeholder="SELECT writi..book..." />
               </folding>
             </state>
           </provider>
@@ -205,7 +207,6 @@
         <option value="$PROJECT_DIR$/favorites.php" />
         <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/books.php" />
-        <option value="$PROJECT_DIR$/favorite.php" />
         <option value="$PROJECT_DIR$/js/add_book.js" />
         <option value="$PROJECT_DIR$/profile.php" />
         <option value="$PROJECT_DIR$/css/jQuery-Autocomplete/styles.css" />
@@ -213,9 +214,10 @@
         <option value="$PROJECT_DIR$/db_connection/get_lang.php" />
         <option value="$PROJECT_DIR$/css/sidebar.css" />
         <option value="$PROJECT_DIR$/mybooks.php" />
-        <option value="$PROJECT_DIR$/js/book_functions.js" />
         <option value="$PROJECT_DIR$/db_connection/get_author.php" />
         <option value="$PROJECT_DIR$/db_connection/load_favorite_books.php" />
+        <option value="$PROJECT_DIR$/favorite.php" />
+        <option value="$PROJECT_DIR$/js/book_functions.js" />
       </list>
     </option>
   </component>
@@ -637,7 +639,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450150958614</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Fix Favorite book response.">
+      <created>1450179991153</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1450179991153</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -653,8 +661,9 @@
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.178125" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36305732" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -662,7 +671,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -686,7 +694,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Main page with sidebar." />
     <MESSAGE value="Start working with db." />
     <MESSAGE value="Can't add AJAX :((" />
     <MESSAGE value="AJAX is trying to work.." />
@@ -711,7 +718,8 @@
     <MESSAGE value="Value and data for autocomplete." />
     <MESSAGE value="Work cool)" />
     <MESSAGE value="Add book-&gt;page ready. Require server part." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add book-&gt;page ready. Require server part." />
+    <MESSAGE value="Fix Favorite book response." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Favorite book response." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -984,14 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/favorite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="112" column="54" selection-start-line="112" selection-start-column="54" selection-end-line="112" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/books.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1073,16 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/book_functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="161" column="54" selection-start-line="161" selection-start-column="54" selection-end-line="161" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db_connection/load_my_books.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.32258">
@@ -1107,14 +1097,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db_connection/load_favorite_books.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2918979">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        <state vertical-scroll-proportion="-23.387096">
+          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
           <folding>
-            <marker date="1450179745049" expanded="true" signature="563:608" placeholder="SELECT count..want_read..." />
-            <marker date="1450179745049" expanded="true" signature="848:1422" placeholder="select title..writing_id..." />
-            <marker date="1450179745049" expanded="true" signature="917:1130" placeholder="select writi..writing..." />
-            <marker date="1450179745049" expanded="true" signature="1140:1336" placeholder="SELECT want_..writing..." />
-            <marker date="1450179745049" expanded="true" signature="1140:1337" placeholder="SELECT want_..writing..." />
+            <marker date="1450180283237" expanded="true" signature="563:608" placeholder="SELECT count..want_read..." />
+            <marker date="1450180283237" expanded="true" signature="848:1620" placeholder="SELECT title..writing_id..." />
+            <marker date="1450180283237" expanded="true" signature="848:1644" placeholder="select title..writing_id..." />
+            <marker date="1450180283237" expanded="true" signature="931:1180" placeholder="SELECT writi..writing..." />
+            <marker date="1450180283237" expanded="true" signature="1194:1346" placeholder="SELECT want_..writing..." />
+            <marker date="1450180283237" expanded="true" signature="1194:1347" placeholder="SELECT want_..writing..." />
+            <marker date="1450180283237" expanded="true" signature="1368:1531" placeholder="SELECT writi..book..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/favorite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-46.80645">
+          <caret line="148" column="26" selection-start-line="148" selection-start-column="26" selection-end-line="148" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/book_functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6609442">
+          <caret line="86" column="10" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
           </folding>
         </state>
       </provider>
