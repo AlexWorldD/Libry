@@ -4,6 +4,7 @@
 function edit_user() {
 
     var c=$('#country').val();
+    /*
     $.ajax({
             type: "POST",
             url: "http://localhost:8080/bd/db_connection/get_country.php",
@@ -43,6 +44,7 @@ function edit_user() {
             }
         }
     )
+    */
     $('#f_name').removeAttr("disabled");
     $('#l_name').removeAttr("disabled");
     $('#age').removeAttr("disabled");

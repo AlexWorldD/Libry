@@ -25,9 +25,11 @@ sec_session_start(); // start secure session
     <link rel="stylesheet" type="text/css" href="js/easyui/easyui.css">
     <link rel="stylesheet" type="text/css" href="js/easyui/icon.css">
     <link href="Bootstrap3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/jQuery-Autocomplete/styles.css" rel="stylesheet">
     <link href="css/sidebar.css" rel="stylesheet">
     <script type="text/javascript" src="js/easyui/jquery_easy_ui.js"></script>
     <script type="text/javascript" src="http://www.jeasyui.com/easyui/datagrid-detailview.js"></script>
+    <script type="text/JavaScript" src="js/jQuery-Autocomplete/jquery.autocomplete.js"></script>
 
     <!-- <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css"> -->
     <script type="text/JavaScript" src="js/sha512.js"></script>
@@ -36,6 +38,7 @@ sec_session_start(); // start secure session
     <script type="text/JavaScript" src="js/edit_user.js"></script>
     <script type="text/JavaScript" src="js/user_functions.js"></script>
     <script type="text/JavaScript" src="js/hash_functions.js"></script>
+
 </head>
 <body>
 
@@ -97,9 +100,11 @@ sec_session_start(); // start secure session
                 <div class="col-md-10 col-md-offset-1">
                     <div class="panel panel-default">
                         <div class="panel-heading">Персональная информация
+                            <!--
                             <button type="button" class="btn btn-default"
                                     onclick="load_user(<?php echo htmlentities($_SESSION['user_id']); ?>)">Put
                             </button>
+                            -->
                         </div>
                         <div class="panel-body">
 
@@ -230,6 +235,11 @@ sec_session_start(); // start secure session
 
     </div>
     <!-- /#page-content-wrapper -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            load_user(<?php echo htmlentities($_SESSION['user_id']); ?>)
+        })
+    </script>
     <script>
         $("#menu-toggle").click(function (e) {
             e.preventDefault();

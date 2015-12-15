@@ -139,6 +139,7 @@ $(document).ready(function () {
     });
 
 });
+var s_r;
 function add_book(id) {
     user_id = id;
     $('#add_success').attr("hidden", true);
@@ -185,6 +186,75 @@ $(function () {
         }
 
     });
+});
+$(function () {
+    $('#search').devbridgeAutocomplete({
+        serviceUrl: 'http://localhost:8080/bd/db_connection/get_title.php',
+        preventBadQueries: true,
+        showNoSuggestionNotice: true,
+        onSelect: function (suggestion) {
+            s_r=suggestion;
+            $('#title_book').empty();
+
+            $('#title_book').append(
+                suggestion.value
+            );
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8080/bd/db_connection/get_author.php",
+                dataType: "json",
+                data: "writing_id=" + suggestion.data,
+                error: function () {
+                    alert("Error with second AJAX!");
+                },
+                success: function (data) {
+                    $('#release_y').empty();
+                    $('#release_y').append(
+                        data[0].release_year
+                    );
+                    $('#l_n').empty();
+                    $('#l_n').append(
+                        data[0].last_name
+                    );
+                    $('#f_n').empty();
+                    $('#f_n').append(
+                        data[0].first_name
+                    );
+                    $('#pat').empty();
+                    $('#pat').append(
+                        data[0].patronymic
+                    );
+                }
+            });
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8080/bd/db_connection/get_desc.php",
+                dataType: "json",
+                data: "writing_id=" + suggestion.data,
+                error: function () {
+                    alert("Error with second AJAX!");
+                },
+                success: function (data) {
+                    $('#descrip_book').empty();
+                    $('#descrip_book').append(
+                        data[0].description
+                    );
+                }
+            });
+
+        }
+
+    });
+    if (s_r==null) {
+        $('#title_book').empty();
+        $('#release_y').empty();
+        $('#l_n').empty();
+        $('#f_n').empty();
+        $('#pat').empty();
+        $('#descrip_book').empty();
+
+
+    }
 });
 /*
  $(document).ready(function () {

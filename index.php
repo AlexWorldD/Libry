@@ -25,9 +25,11 @@ include_once 'db_connection/bd_connect_secure.php';?>
     <link rel="stylesheet" type="text/css" href="js/easyui/easyui.css">
     <link rel="stylesheet" type="text/css" href="js/easyui/icon.css">
     <link href="Bootstrap3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/jQuery-Autocomplete/styles.css" rel="stylesheet">
     <link href="css/sidebar.css" rel="stylesheet">
     <script type="text/javascript" src="js/easyui/jquery_easy_ui.js"></script>
     <script type="text/javascript" src="http://www.jeasyui.com/easyui/datagrid-detailview.js"></script>
+    <script type="text/JavaScript" src="js/jQuery-Autocomplete/jquery.autocomplete.js"></script>
 
     <!-- <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css"> -->
     <script type="text/JavaScript" src="js/sha512.js"></script>
@@ -97,30 +99,60 @@ include_once 'db_connection/bd_connect_secure.php';?>
 
                         <div class="panel-heading">
 
-
+                            <div class="row">
+                                <div class="col-md-12 col-xs-5">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Поиск книги</span>
+                                        <input type="text" class="form-control" id="search" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="panel-body">
-                            <!--
-                            <table id="t_books" class="easyui-datagrid" style="height:550px"
-                                   url="db_connection/load_books.php"
-                                   striped="true"
-                                   toolbar="#toolbar" pagination="true"
-                                   rownumbers="true" fitColumns="true" singleSelect="true"
-                            >
-                                <thead>
-                                <tr>
-                                    <th field="writing_id" width="0" hidden="true"></th>
-                                    <th field="title" width="35%" align="center">Название</th>
-                                    <th field="last_name" width="15%" sortable="true">Автор</th>
-                                    <th field="first_name" width="20" align="center"></th>
-                                    <th field="patronymic" width="20%"></th>
-                                    <th field="numbers" width="10%" align="center" sortable="true" order="desc">
-                                        Количество
-                                    </th>
-                                </tr>
-                                </thead>
-                            </table>
-                            -->
+
+
+                                    <div class="modal-header">
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <div class="row">
+                                                <h4 class="modal-title text-center"><span id="title_book"> </span> <span> &nbsp <span
+                                                            class="text-muted" id="release_y"></span> </span></h4>
+                                            </div>
+
+                                        </div>
+                                        <br>
+                                        <div class="col-md-10 col-md-offset-1">
+                                            <div class="row">
+                                                <h4 class="modal-title text-center"><em><span id="l_n"></span> &nbsp <span
+                                                            id="f_n"></span> &nbsp <span id="pat"></span></em></h4>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="modal-body text-justify" id="descrip_book">
+                                    </div>
+                                    <br>
+                                    <div class="modal-footer">
+
+
+                                        <!--
+                        <div class="row">
+                            <div id="b_msg" class="alert alert-success alert-dismissable text-center" hidden>
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                Книга добавлена!
+                            </div>
+                            <div id="b_msg_war" class="alert alert-warning alert-dismissable text-center" hidden>
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                Книга уже в вашем списке Favorites!
+                            </div>
+                            <button type="button" class="btn btn-primary- btn-link" onclick="add_fav(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add to <span class="glyphicon glyphicon-star-empty"></span></button>
+                        </div>
+                        -->
+                                    </div>
+
+
                         </div>
                     </div>
                 </div>
