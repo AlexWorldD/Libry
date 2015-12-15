@@ -3,6 +3,7 @@
  */
 var writing_id;
 var user_id = 0;
+
 $(document).ready(function () {
     $('#t_books').datagrid({
         onDblClickRow: function (index, row) {
@@ -127,6 +128,25 @@ $(document).ready(function () {
     });
 
 });
-function add_book(user_id) {
+function add_book(id) {
+    user_id = id;
     $("#add_book").modal('show');
 }
+var countries = [
+    { value: 'Andorra', data: 'AD' },
+    // ...
+    { value: 'Zimbabwe', data: 'ZZ' }
+];
+var c=["Russia","Andorra"];
+//[{"value":"Afsdfa","data":"wtf"},{"value":"Basdfasdf","data":"wtf"}]
+
+$(function() {
+    $('#title').devbridgeAutocomplete({
+        serviceUrl: 'http://localhost:8080/bd/db_connection/get_title.php',
+        //lookup: c,
+        //minChars: 3,
+        onSelect: function (suggestion) {
+            alert('You selected: ' + suggestion.value);
+        }
+    });
+});

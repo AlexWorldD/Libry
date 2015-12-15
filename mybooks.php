@@ -23,8 +23,10 @@ sec_session_start(); // start secure session
     <link rel="stylesheet" type="text/css" href="js/easyui/icon.css">
     <link href="Bootstrap3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/sidebar.css" rel="stylesheet">
+    <link href="css/jQuery-Autocomplete/styles.css" rel="stylesheet">
     <script type="text/javascript" src="js/easyui/jquery_easy_ui.js"></script>
     <script type="text/javascript" src="http://www.jeasyui.com/easyui/datagrid-detailview.js"></script>
+    <script type="text/JavaScript" src="js/jQuery-Autocomplete/jquery.autocomplete.js"></script>
 
     <!-- <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css"> -->
     <script type="text/JavaScript" src="js/sha512.js"></script>
@@ -34,6 +36,7 @@ sec_session_start(); // start secure session
     <script type="text/JavaScript" src="js/user_functions.js"></script>
     <script type="text/JavaScript" src="js/hash_functions.js"></script>
     <script type="text/JavaScript" src="js/book_functions.js"></script>
+
 
 <body>
 
@@ -204,11 +207,12 @@ sec_session_start(); // start secure session
                                     <div class="col-md-12 col-xs-5">
                                         <div class="input-group">
                                             <span class="input-group-addon">Название</span>
-                                            <input type="text" class="form-control" placeholder="" id="add_title">
+                                            <input type="text" class="form-control" id="add_title">
                                         </div>
                                     </div>
                                 </div>
                                 <br>
+                                <input type="text" class="form-control" id="title"/>
                                 <br>
 
                                 <div class="row">
