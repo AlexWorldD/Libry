@@ -139,7 +139,7 @@ if ($in == 0) {
     // already has 2 language ID. Good )
     //////////
     // Start INSERT to writing table
-    $request = $mysqli->prepare("INSERT INTO writing (title, release_year, description, lang_origin) VALUES (?, ?, ?, ?)");
+    $request = $mysqli->prepare("INSERT INTO writing (title, release_year, description, lang_origin, numbers) VALUES (?, ?, ?, ?, 0)");
     $request->bind_param('sisi', $title, $release, $desc, $lang_o_id);
     if (!$request->execute()) {
         mysqli_query($mysqli, 'ROLLBACK;');
@@ -150,8 +150,8 @@ if ($in == 0) {
     // already has writing_ID.
     // start work with author
     // author in Libry
-    if ($author_in==1) {
-        $author_id=intval($_POST['author_id']);
+    if ($author_in == 1) {
+        $author_id = intval($_POST['author_id']);
         $request = $mysqli->prepare("INSERT INTO author_writing (author_id, writing_id) VALUES (?, ?)");
         $request->bind_param('ii', $author_id, $writing_id);
         if (!$request->execute()) {
@@ -161,13 +161,12 @@ if ($in == 0) {
         $request->close();
     }
     // Required add author to Libry
-    if ($author_in==0)
-    {
+    if ($author_in == 0) {
         $f_name = $_POST['f_name'];
         $l_name = $_POST['l_name'];
         $pat = $_POST['pat'];
-        $born = $_POST['born'];
-        $death = $_POST['death'];
+        $born = intval($_POST['born']);
+        $death = intval($_POST['death']);
         $country = $_POST['country'];
         // gets country id
         $request = $mysqli->prepare("SELECT country_id FROM country where country=?");
@@ -192,10 +191,42 @@ if ($in == 0) {
             }
         }
         // Already has country_ID for author
-
+// Start INSERT to writing table
+        $request = $mysqli->prepare("INSERT INTO author (first_name, last_name, patronymic, year_born, year_death, country_id) VALUES (?, ?, ?, ?, ?, ?)");
+        $request->bind_param('sssiii', $f_name, $l_name, $pat, $born, $death, $country_id);
+        if (!$request->execute()) {
+            mysqli_query($mysqli, 'ROLLBACK;');
+            die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+        }
+        $author_id = mysqli_insert_id($mysqli);
+        $request->close();
+        // Already has author_id
+        $request = $mysqli->prepare("INSERT INTO author_writing (author_id, writing_id) VALUES (?, ?)");
+        $request->bind_param('ii', $author_id, $writing_id);
+        if (!$request->execute()) {
+            mysqli_query($mysqli, 'ROLLBACK;');
+            die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+        }
+        $request->close();
 
     }
-
+    // Add book to book table
+    $request = $mysqli->prepare("INSERT INTO book (writing_id, lang, page_num) VALUES (?, ?, ?)");
+    $request->bind_param('iii', $writing_id, $lang_id, $pages);
+    if (!$request->execute()) {
+        mysqli_query($mysqli, 'ROLLBACK;');
+        die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+    }
+    $book_id = mysqli_insert_id($mysqli);
+    $request->close();
+    // Add book to common_books table
+    $request = $mysqli->prepare("INSERT INTO common_books (book_id, user_id) VALUES (?, ?)");
+    $request->bind_param('ii', $book_id, $user_id);
+    if (!$request->execute()) {
+        mysqli_query($mysqli, 'ROLLBACK;');
+        die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+    }
+    $request->close();
     mysqli_query($mysqli, 'COMMIT;');
     echo json_encode(array('OK' => true));
 }
