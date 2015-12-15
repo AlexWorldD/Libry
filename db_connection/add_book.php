@@ -163,6 +163,36 @@ if ($in == 0) {
     // Required add author to Libry
     if ($author_in==0)
     {
+        $f_name = $_POST['f_name'];
+        $l_name = $_POST['l_name'];
+        $pat = $_POST['pat'];
+        $born = $_POST['born'];
+        $death = $_POST['death'];
+        $country = $_POST['country'];
+        // gets country id
+        $request = $mysqli->prepare("SELECT country_id FROM country where country=?");
+        $request->bind_param('s', $country);
+        if (!$request->execute()) {
+            mysqli_query($mysqli, 'ROLLBACK;');
+            die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+        } else {
+            //Get country_id for author
+            $request->bind_result($country_id);
+            $request->fetch();
+            $request->close();
+            if ($country_id == NULL) {
+                $request = $mysqli->prepare('INSERT INTO country (country) VALUES (?)');
+                $request->bind_param('s', $country);
+                if (!$request->execute()) {
+                    mysqli_query($mysqli, 'ROLLBACK;');
+                    die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+                }
+                $country_id = mysqli_insert_id($mysqli);
+                $request->close();
+            }
+        }
+        // Already has country_ID for author
+
 
     }
 

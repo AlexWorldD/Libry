@@ -261,13 +261,19 @@ sec_session_start(); // start secure session
                                     </div>
                                     <br>
                                     <div class="row">
-                                        <div class="col-md-6 col-xs-5">
+                                        <div class="col-md-4 col-xs-4">
                                             <div class="input-group">
                                                 <span class="input-group-addon">Год рождения</span>
                                                 <input type="text" class="form-control" id="a_y_born"  data-validation="date" data-validation-format="yyyy"/>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 col-xs-5">
+                                        <div class="col-md-4 col-xs-4">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Страна</span>
+                                                <input type="text" class="form-control" id="a_country"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-4">
                                             <div class="input-group">
                                                 <span class="input-group-addon">Год смерти</span>
                                                 <input type="text" class="form-control" id="a_y_death"/>

@@ -223,6 +223,12 @@ $(function () {
         onSelect: function (suggestion) {
         }
     });
+    $('#a_country').devbridgeAutocomplete({
+        serviceUrl: 'http://localhost:8080/bd/db_connection/get_country.php',
+        preventBadQueries: true,
+        onSelect: function (suggestion) {
+        }
+    });
 });
 function save_book(u_id) {
     // Adding book in Libry's already, count+1 only
@@ -290,7 +296,8 @@ function save_book(u_id) {
                 "&lang_o=" + $('#a_lang_orig').val() +
                 "&lang=" + $('#a_lang').val() +
                 "&pages=" + $('#a_page').val() +
-                "&release=" + $('#a_year').val(),
+                "&release=" + $('#a_year').val() +
+                "&country=" + $('#a_country').val(),
                 error: function () {
                     alert("Error with second AJAX!");
                 },
