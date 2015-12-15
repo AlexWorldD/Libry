@@ -141,10 +141,20 @@ $(document).ready(function () {
 });
 function add_book(id) {
     user_id = id;
+    $('#add_success').attr("hidden", true);
+    $('#add_fail').attr("hidden", true);
     $('#title').val('');
     $('#add_l_n').val('');
     $('#add_f_n').val('');
     $('#add_pat').val('');
+    $('#a_desc').val('');
+    $('#a_y_born').val('');
+    $('#a_y_death').val('');
+    $('#a_country').val('');
+    $('#a_lang_orig').val('');
+    $('#a_lang').val('');
+    $('#a_page').val('');
+    $('#a_year').val('');
     $("#add_book").modal('show');
 }
 $(function () {
@@ -239,11 +249,23 @@ function save_book(u_id) {
             dataType: "json",
             data: "in=1&user_id=" + u_id + "&writing_id=" + res_t.data + "&lang=" + $('#a_lang').val() + "&pages=" + $('#a_page').val(),
             error: function () {
-                alert("Error with second AJAX!");
+                $('#add_fail').removeAttr("hidden");
             },
             success: function (data) {
 
-                alert("Success!");
+                $('#add_success').removeAttr("hidden");
+                $('#title').val('');
+                $('#add_l_n').val('');
+                $('#add_f_n').val('');
+                $('#add_pat').val('');
+                $('#a_desc').val('');
+                $('#a_y_born').val('');
+                $('#a_y_death').val('');
+                $('#a_country').val('');
+                $('#a_lang_orig').val('');
+                $('#a_lang').val('');
+                $('#a_page').val('');
+                $('#a_year').val('');
             }
         });
 
@@ -270,11 +292,23 @@ function save_book(u_id) {
                 "&pages=" + $('#a_page').val() +
                 "&release=" + $('#a_year').val(),
                 error: function () {
-                    alert("Error with second AJAX!");
+                    $('#add_fail').removeAttr("hidden");
                 },
                 success: function (data) {
 
-                    alert("Success!");
+                    $('#add_success').removeAttr("hidden");
+                    $('#title').val('');
+                    $('#add_l_n').val('');
+                    $('#add_f_n').val('');
+                    $('#add_pat').val('');
+                    $('#a_desc').val('');
+                    $('#a_y_born').val('');
+                    $('#a_y_death').val('');
+                    $('#a_country').val('');
+                    $('#a_lang_orig').val('');
+                    $('#a_lang').val('');
+                    $('#a_page').val('');
+                    $('#a_year').val('');
                 }
             });
         }
@@ -299,15 +333,61 @@ function save_book(u_id) {
                 "&release=" + $('#a_year').val() +
                 "&country=" + $('#a_country').val(),
                 error: function () {
-                    alert("Error with second AJAX!");
+                    $('#add_fail').removeAttr("hidden");
                 },
                 success: function (data) {
 
-                    alert("Success!");
+                    $('#add_success').removeAttr("hidden");
+                    $('#title').val('');
+                    $('#add_l_n').val('');
+                    $('#add_f_n').val('');
+                    $('#add_pat').val('');
+                    $('#a_desc').val('');
+                    $('#a_y_born').val('');
+                    $('#a_y_death').val('');
+                    $('#a_country').val('');
+                    $('#a_lang_orig').val('');
+                    $('#a_lang').val('');
+                    $('#a_page').val('');
+                    $('#a_year').val('');
                 }
             });
         }
 
     }
 
+}
+function cancel_book() {
+    $("#add_book").modal('hide');
+}
+function del_book(u_id) {
+    var del_row = $('#t_my_books').datagrid('getSelected');
+    if (del_row) {
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/bd/db_connection/delete.php",
+            dataType: "json",
+            data: "user_id="+u_id+"&book_id="+del_row.book_id,
+            error: function () {
+                //$('#add_fail').removeAttr("hidden");
+            },
+            success: function (data) {
+                $('#t_my_books').datagrid('reload');
+            }
+        });
+    }
+}
+function get_xml_m(u_id) {
+    $.ajax({
+        type: "POST",
+        url: "http://localhost:8080/bd/db_connection/get_xml.php",
+        dataType: "json",
+        data: "user_id="+u_id+"&mode=my",
+        error: function () {
+            //$('#add_fail').removeAttr("hidden");
+        },
+        success: function (data) {
+
+        }
+    });
 }

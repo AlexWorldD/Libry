@@ -98,11 +98,14 @@ sec_session_start(); // start secure session
                         <div class="panel-heading">
                             <div class="text-right">
                                 <div class="row">
-                                    <button type="button" class="btn btn-primary- btn-link" onclick="">XML export <span
-                                            class="glyphicon glyphicon-floppy-save"></span></button>
-                                    <button type="button" class="btn btn-primary- btn-link"
+                                    <button type="button" class="btn  btn-link"
                                             onclick="add_book(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add
                                         <span class="glyphicon glyphicon-plus"></span></button>
+                                    <button type="button" class="btn  btn-link" onclick="get_xml_m(<?php echo htmlentities($_SESSION['user_id']); ?>)">XML export <span
+                                            class="glyphicon glyphicon-floppy-save"></span></button>
+                                    <button type="button" class="btn  btn-link btn-xs"
+                                            onclick="del_book(<?php echo htmlentities($_SESSION['user_id']); ?>)">Delete
+                                        <span class="glyphicon glyphicon-trash"></span></button>
                                 </div>
                             </div>
 
@@ -117,6 +120,7 @@ sec_session_start(); // start secure session
                                 <thead>
                                 <tr>
                                     <th field="writing_id" width="0" hidden="true"></th>
+                                    <th field="book_id" width="0" hidden="true"></th>
                                     <th field="title" width="35%" align="center">Название</th>
                                     <th field="last_name" width="15%" sortable="true">Автор</th>
                                     <th field="first_name" width="20" align="center"></th>
@@ -194,7 +198,14 @@ sec_session_start(); // start secure session
 
                         </div>
                     </div>
-
+                    <div id="add_success" class="alert alert-success alert-dismissable text-center" hidden>
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        Книга добавлена!
+                    </div>
+                    <div id="b_msg_war" class="alert alert-warning alert-dismissable text-center" hidden>
+                        <button type="add_fail" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        Something went wrong... We are grazy upset...
+                    </div>
                     <div class="modal-body text-justify">
                         <form >
                             <div class="panel panel-default">
@@ -339,7 +350,7 @@ sec_session_start(); // start secure session
                                         </div>
                                         <div class="btn-group" role="group">
                                             <button type="button" class="btn btn-link" id="btc"
-                                                    onclick="cancel_book(<?php echo htmlentities($_SESSION['user_id']); ?>)" >
+                                                    onclick="cancel_book()" >
                                                 Отмена
                                             </button>
                                         </div>

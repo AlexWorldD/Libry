@@ -29,6 +29,7 @@ if (!$tmp) {
 $result['total'] = mysqli_fetch_row($tmp)[0];
 $request = mysqli_query($mysqli, "SELECT
     t1.writing_id,
+    t1.book_id,
     title,
     last_name,
     first_name,
@@ -41,7 +42,7 @@ FROM
         book
     JOIN common_books ON book.book_id = common_books.book_id
     WHERE
-        user_id = 1) AS t1 JOIN writing
+        user_id = $user_id) AS t1 JOIN writing
         JOIN
     author_writing
         JOIN
