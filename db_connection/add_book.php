@@ -9,11 +9,11 @@ include_once "bd_connect_secure.php";
 // Getting all vars from _POST.
 $in = intval($_POST['in']);
 $user_id = intval($_POST['user_id']);
-$writing_id = intval($_POST['writing_id']);
 $lang = $_POST['lang'];
 $pages = intval($_POST['pages']);
 // Book already in Libry
 if ($in == 1) {
+    $writing_id = intval($_POST['writing_id']);
     // Start work with db
     mysqli_query($mysqli, 'SET AUTOCOMMIT=0');
     mysqli_query($mysqli, 'START TRANSACTION');
@@ -77,6 +77,67 @@ if ($in == 1) {
 
         }
     }
+    mysqli_query($mysqli, 'COMMIT;');
+    echo json_encode(array('OK' => true));
+}
+// Writing not in Libry
+///////////////////////////////////
+if ($in == 0) {
+    // Start work with db
+    $title = $_POST['title'];
+    $desc = $_POST['desc'];
+    $lang_o = $_POST['lang_o'];
+    $release = intval($_POST['release']);
+    mysqli_query($mysqli, 'SET AUTOCOMMIT=0');
+    mysqli_query($mysqli, 'START TRANSACTION');
+// Prepare our request for db
+    // gets language original id
+    $request = $mysqli->prepare("SELECT language_id FROM language where lang=?");
+    $request->bind_param('s', $lang_o);
+    if (!$request->execute()) {
+        mysqli_query($mysqli, 'ROLLBACK;');
+        die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+    } else {
+        //Get language_id for book
+        $request->bind_result($lang_o_id);
+        $request->fetch();
+        $request->close();
+        if ($lang_o_id == NULL) {
+            $request = $mysqli->prepare('INSERT INTO language (lang) VALUES (?)');
+            $request->bind_param('s', $lang_o);
+            if (!$request->execute()) {
+                mysqli_query($mysqli, 'ROLLBACK;');
+                die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+            }
+            $lang_o_id = mysqli_insert_id($mysqli);
+            $request->close();
+        }
+    }
+    // gets language id
+    $request = $mysqli->prepare("SELECT language_id FROM language where lang=?");
+    $request->bind_param('s', $lang);
+    if (!$request->execute()) {
+        mysqli_query($mysqli, 'ROLLBACK;');
+        die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+    } else {
+        //Get language_id for book
+        $request->bind_result($lang_id);
+        $request->fetch();
+        $request->close();
+        if ($lang_o_id == NULL) {
+            $request = $mysqli->prepare('INSERT INTO language (lang) VALUES (?)');
+            $request->bind_param('s', $lang);
+            if (!$request->execute()) {
+                mysqli_query($mysqli, 'ROLLBACK;');
+                die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+            }
+            $lang_id = mysqli_insert_id($mysqli);
+            $request->close();
+        }
+    }
+    // already has 2 language ID. Good )
+
+
     mysqli_query($mysqli, 'COMMIT;');
     echo json_encode(array('OK' => true));
 }

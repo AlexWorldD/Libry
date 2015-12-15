@@ -4,6 +4,7 @@
 var writing_id;
 var user_id = 0;
 var res_t;
+var res_a;
 $(document).ready(function () {
     $('#t_books').datagrid({
         onDblClickRow: function (index, row) {
@@ -202,8 +203,10 @@ $(function () {
                     $('#a_y_born').val(data[0].year_born);
                     $('#a_y_death').val(data[0].year_death);
                     $('#title').val('');
+                    $('#title').focus();
                 }
             });
+            res_a = suggestion;
         }
     });
 });
@@ -223,7 +226,7 @@ $(function () {
 });
 function save_book(u_id) {
     // Adding book in Libry's already, count+1 only
-    if ($('#title').val() == res_t.value) {
+    if (res_t != null) {
         $.ajax({
             type: "POST",
             url: "http://localhost:8080/bd/db_connection/add_book.php",
@@ -239,10 +242,14 @@ function save_book(u_id) {
         });
 
     }
-    else {
-        // TODO add validation for fields
-        // Adding book NOT in Libry's...
-        if ($('#title').val() != res_t.value) {
+    else
+    // TODO add validation for fields
+    // Adding book NOT in Libry's...
+
+    {
+        //Look for author
+        // Author in Libry already
+        if (res_a != null) {
             $.ajax({
                 type: "POST",
                 url: "http://localhost:8080/bd/db_connection/add_book.php",
@@ -250,6 +257,31 @@ function save_book(u_id) {
                 data: "in=0&user_id=" + u_id +
                 "&title=" + $('#title').val() +
                 "&desc=" + $('#a_desc').val() +
+                "&author_in=1" +
+                "&author_id=" + res_a.data +
+                "&lang_o=" + $('#a_lang_orig').val() +
+                "&lang=" + $('#a_lang').val() +
+                "&pages=" + $('#a_page').val() +
+                "&release=" + $('#a_year').val(),
+                error: function () {
+                    alert("Error with second AJAX!");
+                },
+                success: function (data) {
+
+                    alert("Success!");
+                }
+            });
+        }
+        // Require to add author to Libry
+        else {
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8080/bd/db_connection/add_book.php",
+                dataType: "json",
+                data: "in=0&user_id=" + u_id +
+                "&title=" + $('#title').val() +
+                "&desc=" + $('#a_desc').val() +
+                "&author_in=0" +
                 "&l_name=" + $('#add_l_n').val() +
                 "&f_name=" + $('#add_f_n').val() +
                 "&pat=" + $('#add_pat').val() +
@@ -267,7 +299,8 @@ function save_book(u_id) {
                     alert("Success!");
                 }
             });
-
         }
+
     }
+
 }
