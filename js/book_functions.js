@@ -228,7 +228,7 @@ function save_book(u_id) {
             type: "POST",
             url: "http://localhost:8080/bd/db_connection/add_book.php",
             dataType: "json",
-            data: "in=0&user_id=" + u_id + "&writing_id=" + res_t.data + "&lang=" + $('#a_lang').val() + "&pages=" + $('#a_page').val(),
+            data: "in=1&user_id=" + u_id + "&writing_id=" + res_t.data + "&lang=" + $('#a_lang').val() + "&pages=" + $('#a_page').val(),
             error: function () {
                 alert("Error with second AJAX!");
             },
