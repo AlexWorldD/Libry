@@ -234,19 +234,40 @@ function save_book(u_id) {
             },
             success: function (data) {
 
-                $('#add_f_n').val(data[0].first_name);
-                $('#add_pat').val(data[0].patronymic);
-                $('#a_y_born').val(data[0].year_born);
-                $('#a_y_death').val(data[0].year_death);
-                $('#title').val('');
+                alert("Success!");
             }
         });
-        /*
-         if(jQuery.inArray($('#title').val(), res_t)==-1 && jQuery.inArray($('#title').val(), res_t)!=0) {
-         alert("hi");
-         }
-         */
 
+    }
+    else {
+        // TODO add validation for fields
+        // Adding book NOT in Libry's...
+        if ($('#title').val() != res_t.value) {
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8080/bd/db_connection/add_book.php",
+                dataType: "json",
+                data: "in=0&user_id=" + u_id +
+                "&title=" + $('#title').val() +
+                "&desc=" + $('#a_desc').val() +
+                "&l_name=" + $('#add_l_n').val() +
+                "&f_name=" + $('#add_f_n').val() +
+                "&pat=" + $('#add_pat').val() +
+                "&born=" + $('#a_y_born').val() +
+                "&death=" + $('#a_y_death').val() +
+                "&lang_o=" + $('#a_lang_orig').val() +
+                "&lang=" + $('#a_lang').val() +
+                "&pages=" + $('#a_page').val() +
+                "&release=" + $('#a_year').val(),
+                error: function () {
+                    alert("Error with second AJAX!");
+                },
+                success: function (data) {
 
+                    alert("Success!");
+                }
+            });
+
+        }
     }
 }
