@@ -10,7 +10,7 @@ include_once 'db_connection/functions.php';
 sec_session_start(); // start secure session
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -196,48 +196,151 @@ sec_session_start(); // start secure session
                     </div>
 
                     <div class="modal-body text-justify">
-                        <div class="panel panel-default">
-                            <div class="panel-heading text-left">Основная информация
-                                <!--
+                        <form >
+                            <div class="panel panel-default">
+                                <div class="panel-heading text-left">Основная информация
+                                    <!--
                                 <button type="button" class="btn btn-default"
                                         onclick="load_user(<?php echo htmlentities($_SESSION['user_id']); ?>)">Put
                                 </button>
                                 -->
-                            </div>
-                            <div class="panel-body">
+                                </div>
+                                <div class="panel-body">
 
-                                <div class="row">
-                                    <div class="col-md-12 col-xs-5">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">Название</span>
-                                            <input type="text" class="form-control" id="title"/>
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-5">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Название</span>
+                                                <input type="text" class="form-control" id="title" data-validation="length alphanumeric"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Описание</span>
+                                                <textarea class="form-control vresize" rows="5" id="a_desc"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="no_title" class="alert alert-warning alert-dismissable text-center" hidden>
+                                        <button type="button" class="close" data-dismiss="alert"
+                                                aria-hidden="true">&times;</button>
+                                        Данной книги нет в нашей библиотеке! Пожалуйста, заполните дополнительную
+                                        информацию:
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading text-left">Об авторе
+                                    <!--
+                                <button type="button" class="btn btn-default"
+                                        onclick="load_user(<?php echo htmlentities($_SESSION['user_id']); ?>)">Put
+                                </button>
+                                -->
+                                </div>
+                                <div class="panel-body">
+
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Автор</span>
+                                                <input type="text" class="form-control" id="add_l_n" placeholder="Фамилия"/>
+                                                <input type="text" class="form-control" id="add_f_n" placeholder="Имя"/>
+                                                <input type="text" class="form-control" id="add_pat"
+                                                       placeholder="Отчество/Второе имя"/>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-6 col-xs-5">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Год рождения</span>
+                                                <input type="text" class="form-control" id="a_y_born"  data-validation="date" data-validation-format="yyyy"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-xs-5">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Год смерти</span>
+                                                <input type="text" class="form-control" id="a_y_death"/>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <br>
+                            </div>
+                            <br>
 
-                                <div id="no_title" class="alert alert-warning alert-dismissable text-center" hidden>
-                                    <button type="button" class="close" data-dismiss="alert"
-                                            aria-hidden="true">&times;</button>
-                                    Данной книги нет в нашей библиотеке! Пожалуйста, заполните дополнительную
-                                    информацию:
+                            <div class="panel panel-default">
+                                <div class="panel-heading text-left">Дополнительно
+                                    <!--
+                                <button type="button" class="btn btn-default"
+                                        onclick="load_user(<?php echo htmlentities($_SESSION['user_id']); ?>)">Put
+                                </button>
+                                -->
                                 </div>
-                                <br>
+                                <div class="panel-body">
 
-                                <div class="row">
-                                    <div class="col-md-12 col-xs-12">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">Автор</span>
-                                            <input type="text" class="form-control" id="add_l_n" placeholder="Фамилия"/>
-                                            <input type="text" class="form-control" id="add_f_n" placeholder="Имя"/>
-                                            <input type="text" class="form-control" id="add_pat"
-                                                   placeholder="Отчество/Второе имя"/>
+                                    <div class="row">
+                                        <div class="col-md-6 col-xs-5">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Оригинальный язык</span>
+                                                <input type="text" class="form-control" id="a_lang_orig"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-xs-5">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Язык книги</span>
+                                                <input type="text" class="form-control" id="a_lang"/>
+                                            </div>
                                         </div>
                                     </div>
+                                    <br>
+                                    <br>
 
+                                    <div class="row">
+                                        <div class="col-md-6 col-xs-5">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Количество страниц</span>
+                                                <input type="text" class="form-control" id="a_page"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-xs-5">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Год выхода</span>
+                                                <input type="text" class="form-control" id="a_year"/>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                                        <div class="btn-group" role="group">
+                                            <button type="button" class="btn btn-primary" id="bts"
+                                                    onclick="save_book(<?php echo htmlentities($_SESSION['user_id']); ?>)">
+                                                Сохранить
+                                            </button>
+                                        </div>
+                                        <div class="btn-group" role="group">
+                                            <button type="button" class="btn btn-link" id="btc"
+                                                    onclick="save_book(<?php echo htmlentities($_SESSION['user_id']); ?>)" >
+                                                Отмена
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <!--

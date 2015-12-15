@@ -130,4 +130,6 @@ h4 > #user {
     top:20%;
 
     outline: none;
-}
+}.vresize {
+     resize: vertical;
+ }

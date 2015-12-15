@@ -29,11 +29,23 @@ if (isset($_GET['query'])) {
 if(isset($_POST['writing_id'])) {
     $writing_id=intval($_POST['writing_id']);
     $data = mysqli_query($mysqli, "SELECT
-    author.author_id, last_name, first_name, patronymic
+    author.author_id,
+    last_name,
+    first_name,
+    patronymic,
+    year_born,
+    year_death,
+    release_year,
+    lang
 FROM
     author
         JOIN
-    author_writing ON author_writing.author_id = author.author_id WHERE writing_id=".$writing_id);
+    author_writing
+        JOIN
+    writing JOIN language ON author_writing.author_id = author.author_id
+        AND author_writing.writing_id = writing.writing_id AND writing.lang_origin=language.language_id
+WHERE
+    author_writing.writing_id=".$writing_id);
     $items = array();
     while ($row = mysqli_fetch_object($data)) {
         array_push($items, $row);
@@ -43,7 +55,7 @@ FROM
 if(isset($_POST['author_id'])) {
     $author_id=intval($_POST['author_id']);
     $data = mysqli_query($mysqli, "SELECT
-    author.author_id, first_name, patronymic
+    author.author_id, first_name, patronymic, year_born, year_death
 FROM
     author
     WHERE author_id=".$author_id);

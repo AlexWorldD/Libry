@@ -3,7 +3,7 @@
  */
 var writing_id;
 var user_id = 0;
-
+var res_t = false;
 $(document).ready(function () {
     $('#t_books').datagrid({
         onDblClickRow: function (index, row) {
@@ -157,11 +157,24 @@ $(function () {
                     $('#add_f_n').val(data[0].first_name);
 
                     $('#add_pat').val(data[0].patronymic);
+                    $('#a_y_born').val(data[0].year_born);
+                    $('#a_y_death').val(data[0].year_death);
+                    $('#a_lang_orig').val(data[0].lang);
+                    $('#a_year').val(data[0].release_year);
                 }
             });
+            res_t = true;
         }
+
     });
 });
+/*
+ $(document).ready(function () {
+ if ($('#title').val() !="" && !res_t) {
+ alert("check");
+ }
+ })
+ */
 $(function () {
     $('#add_l_n').devbridgeAutocomplete({
         serviceUrl: 'http://localhost:8080/bd/db_connection/get_author.php',
@@ -178,10 +191,26 @@ $(function () {
                 success: function (data) {
 
                     $('#add_f_n').val(data[0].first_name);
-
                     $('#add_pat').val(data[0].patronymic);
+                    $('#a_y_born').val(data[0].year_born);
+                    $('#a_y_death').val(data[0].year_death);
+                    $('#title').val('');
                 }
             });
+        }
+    });
+});
+$(function () {
+    $('#a_lang_orig').devbridgeAutocomplete({
+        serviceUrl: 'http://localhost:8080/bd/db_connection/get_lang.php',
+        preventBadQueries: true,
+        onSelect: function (suggestion) {
+        }
+    });
+    $('#a_lang').devbridgeAutocomplete({
+        serviceUrl: 'http://localhost:8080/bd/db_connection/get_lang.php',
+        preventBadQueries: true,
+        onSelect: function (suggestion) {
         }
     });
 });
