@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="Looks like it's working!">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_connection/delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_connection/get_xml.php" />
+    <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="123">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_connection/load_my_books.php" afterPath="$PROJECT_DIR$/db_connection/load_my_books.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/book_functions.js" afterPath="$PROJECT_DIR$/js/book_functions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mybooks.php" afterPath="$PROJECT_DIR$/mybooks.php" />
     </list>
     <ignored path="StudID.iws" />
@@ -32,8 +28,8 @@
       <file leaf-file-name="mybooks.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mybooks.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36625972">
-              <caret line="103" column="149" selection-start-line="103" selection-start-column="80" selection-end-line="103" selection-end-column="149" />
+            <state vertical-scroll-proportion="0.39067703">
+              <caret line="103" column="146" selection-start-line="103" selection-start-column="146" selection-end-line="103" selection-end-column="146" />
               <folding />
             </state>
           </provider>
@@ -206,11 +202,11 @@
         <option value="$PROJECT_DIR$/db_connection/get_country.php" />
         <option value="$PROJECT_DIR$/db_connection/add_book.php" />
         <option value="$PROJECT_DIR$/db_connection/delete.php" />
-        <option value="$PROJECT_DIR$/mybooks.php" />
         <option value="$PROJECT_DIR$/db_connection/load_my_books.php" />
         <option value="$PROJECT_DIR$/db_connection/my_books.xml" />
         <option value="$PROJECT_DIR$/js/book_functions.js" />
         <option value="$PROJECT_DIR$/db_connection/get_xml.php" />
+        <option value="$PROJECT_DIR$/mybooks.php" />
       </list>
     </option>
   </component>
@@ -686,7 +682,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450194369353</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="123">
+      <created>1450215485052</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1450215485052</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -704,6 +706,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1453125" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -711,7 +714,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -735,7 +737,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="So tired.." />
     <MESSAGE value="Perhaps it' works... But I'm not sure." />
     <MESSAGE value="Change load and edit user's js. Stable work." />
     <MESSAGE value="Add Libry's books page." />
@@ -760,7 +761,8 @@
     <MESSAGE value="save again." />
     <MESSAGE value="add country autocomplete." />
     <MESSAGE value="Looks like it's working!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Looks like it's working!" />
+    <MESSAGE value="123" />
+    <option name="LAST_COMMIT_MESSAGE" value="123" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -940,6 +942,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="134" column="2" selection-start-line="134" selection-start-column="2" selection-end-line="134" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -961,6 +964,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.806452">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,8 +1193,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mybooks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36625972">
-          <caret line="103" column="149" selection-start-line="103" selection-start-column="80" selection-end-line="103" selection-end-column="149" />
+        <state vertical-scroll-proportion="0.39067703">
+          <caret line="103" column="146" selection-start-line="103" selection-start-column="146" selection-end-line="103" selection-end-column="146" />
           <folding />
         </state>
       </provider>

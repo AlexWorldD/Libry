@@ -101,8 +101,7 @@ sec_session_start(); // start secure session
                                     <button type="button" class="btn  btn-link"
                                             onclick="add_book(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add
                                         <span class="glyphicon glyphicon-plus"></span></button>
-                                    <button type="button" class="btn  btn-link" onclick="get_xml_m(<?php echo htmlentities($_SESSION['user_id']); ?>)">XML export <span
-                                            class="glyphicon glyphicon-floppy-save"></span></button>
+                                    <a href="db_connection/get_xml.php?user_id=<?php echo htmlentities($_SESSION['user_id']); ?>"> XML export </a>
                                     <button type="button" class="btn  btn-link btn-xs"
                                             onclick="del_book(<?php echo htmlentities($_SESSION['user_id']); ?>)">Delete
                                         <span class="glyphicon glyphicon-trash"></span></button>
