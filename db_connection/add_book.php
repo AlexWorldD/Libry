@@ -84,6 +84,7 @@ if ($in == 1) {
 ///////////////////////////////////
 if ($in == 0) {
     // Start work with db
+    $author_in = intval($_POST['author_in']);
     $title = $_POST['title'];
     $desc = $_POST['desc'];
     $lang_o = $_POST['lang_o'];
@@ -136,7 +137,34 @@ if ($in == 0) {
         }
     }
     // already has 2 language ID. Good )
+    //////////
+    // Start INSERT to writing table
+    $request = $mysqli->prepare("INSERT INTO writing (title, release_year, description, lang_origin) VALUES (?, ?, ?, ?)");
+    $request->bind_param('sisi', $title, $release, $desc, $lang_o_id);
+    if (!$request->execute()) {
+        mysqli_query($mysqli, 'ROLLBACK;');
+        die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+    }
+    $writing_id = mysqli_insert_id($mysqli);
+    $request->close();
+    // already has writing_ID.
+    // start work with author
+    // author in Libry
+    if ($author_in==1) {
+        $author_id=intval($_POST['author_id']);
+        $request = $mysqli->prepare("INSERT INTO author_writing (author_id, writing_id) VALUES (?, ?)");
+        $request->bind_param('ii', $author_id, $writing_id);
+        if (!$request->execute()) {
+            mysqli_query($mysqli, 'ROLLBACK;');
+            die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+        }
+        $request->close();
+    }
+    // Required add author to Libry
+    if ($author_in==0)
+    {
 
+    }
 
     mysqli_query($mysqli, 'COMMIT;');
     echo json_encode(array('OK' => true));

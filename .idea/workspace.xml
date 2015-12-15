@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="Little fix..">
+    <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="saving.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_connection/add_book.php" afterPath="$PROJECT_DIR$/db_connection/add_book.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/book_functions.js" afterPath="$PROJECT_DIR$/js/book_functions.js" />
     </list>
     <ignored path="StudID.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,19 +80,19 @@
             <entry file="file://$PROJECT_DIR$/db_connection/add_book.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="-43.967743">
-                  <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+                  <caret line="141" column="4" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="4" />
                   <folding>
                     <element signature="e#309#3334#0#PHP" expanded="false" />
-                    <marker date="1450191469751" expanded="true" signature="557:602" placeholder="SELECT langu..language..." />
-                    <marker date="1450191469751" expanded="true" signature="1058:1120" placeholder="INSERT INTO book..." />
-                    <marker date="1450191469751" expanded="true" signature="1550:1607" placeholder="INSERT INTO common_books..." />
-                    <marker date="1450191469751" expanded="true" signature="2027:2065" placeholder="INSERT INTO language..." />
-                    <marker date="1450191469751" expanded="true" signature="2405:2467" placeholder="INSERT INTO book..." />
-                    <marker date="1450191469751" expanded="true" signature="2897:2954" placeholder="INSERT INTO common_books..." />
-                    <marker date="1450191469751" expanded="true" signature="3760:3805" placeholder="SELECT langu..language..." />
-                    <marker date="1450191469751" expanded="true" signature="4217:4255" placeholder="INSERT INTO language..." />
-                    <marker date="1450191469751" expanded="true" signature="4649:4694" placeholder="SELECT langu..language..." />
-                    <marker date="1450191469751" expanded="true" signature="5102:5140" placeholder="INSERT INTO language..." />
+                    <marker date="1450192158258" expanded="true" signature="557:602" placeholder="SELECT langu..language..." />
+                    <marker date="1450192158258" expanded="true" signature="1058:1120" placeholder="INSERT INTO book..." />
+                    <marker date="1450192158258" expanded="true" signature="1550:1607" placeholder="INSERT INTO common_books..." />
+                    <marker date="1450192158258" expanded="true" signature="2027:2065" placeholder="INSERT INTO language..." />
+                    <marker date="1450192158258" expanded="true" signature="2405:2467" placeholder="INSERT INTO book..." />
+                    <marker date="1450192158258" expanded="true" signature="2897:2954" placeholder="INSERT INTO common_books..." />
+                    <marker date="1450192158258" expanded="true" signature="3806:3851" placeholder="SELECT langu..language..." />
+                    <marker date="1450192158258" expanded="true" signature="4263:4301" placeholder="INSERT INTO language..." />
+                    <marker date="1450192158258" expanded="true" signature="4695:4740" placeholder="SELECT langu..language..." />
+                    <marker date="1450192158258" expanded="true" signature="5148:5186" placeholder="INSERT INTO language..." />
                   </folding>
                 </state>
               </provider>
@@ -163,20 +162,21 @@
           <file leaf-file-name="add_book.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/db_connection/add_book.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.21864595">
-                  <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+                <state vertical-scroll-proportion="0.73140955">
+                  <caret line="165" column="8" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
                   <folding>
-                    <element signature="e#309#3334#0#PHP" expanded="false" />
-                    <marker date="1450191469751" expanded="true" signature="557:602" placeholder="SELECT langu..language..." />
-                    <marker date="1450191469751" expanded="true" signature="1058:1120" placeholder="INSERT INTO book..." />
-                    <marker date="1450191469751" expanded="true" signature="1550:1607" placeholder="INSERT INTO common_books..." />
-                    <marker date="1450191469751" expanded="true" signature="2027:2065" placeholder="INSERT INTO language..." />
-                    <marker date="1450191469751" expanded="true" signature="2405:2467" placeholder="INSERT INTO book..." />
-                    <marker date="1450191469751" expanded="true" signature="2897:2954" placeholder="INSERT INTO common_books..." />
-                    <marker date="1450191469751" expanded="true" signature="3760:3805" placeholder="SELECT langu..language..." />
-                    <marker date="1450191469751" expanded="true" signature="4217:4255" placeholder="INSERT INTO language..." />
-                    <marker date="1450191469751" expanded="true" signature="4649:4694" placeholder="SELECT langu..language..." />
-                    <marker date="1450191469751" expanded="true" signature="5102:5140" placeholder="INSERT INTO language..." />
+                    <marker date="1450192158258" expanded="true" signature="557:602" placeholder="SELECT langu..language..." />
+                    <marker date="1450192158258" expanded="true" signature="1058:1120" placeholder="INSERT INTO book..." />
+                    <marker date="1450192158258" expanded="true" signature="1550:1607" placeholder="INSERT INTO common_books..." />
+                    <marker date="1450192158258" expanded="true" signature="2027:2065" placeholder="INSERT INTO language..." />
+                    <marker date="1450192158258" expanded="true" signature="2405:2467" placeholder="INSERT INTO book..." />
+                    <marker date="1450192158258" expanded="true" signature="2897:2954" placeholder="INSERT INTO common_books..." />
+                    <marker date="1450192158258" expanded="true" signature="3806:3851" placeholder="SELECT langu..language..." />
+                    <marker date="1450192158258" expanded="true" signature="4263:4301" placeholder="INSERT INTO language..." />
+                    <marker date="1450192158258" expanded="true" signature="4695:4740" placeholder="SELECT langu..language..." />
+                    <marker date="1450192158258" expanded="true" signature="5148:5186" placeholder="INSERT INTO language..." />
+                    <marker date="1450192158258" expanded="true" signature="5645:5732" placeholder="INSERT INTO writing..." />
+                    <marker date="1450192158258" expanded="true" signature="6223:6287" placeholder="INSERT INTO author_writing..." />
                   </folding>
                 </state>
               </provider>
@@ -703,7 +703,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450187609109</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="saving.">
+      <created>1450191479043</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1450191479043</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -752,7 +758,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Start adding user's page." />
     <MESSAGE value="Absolute KOST'blL'" />
     <MESSAGE value="KOST'blL' fix. Now it works great!" />
     <MESSAGE value="Start user's update transaction." />
@@ -777,7 +782,8 @@
     <MESSAGE value="Continue adding book." />
     <MESSAGE value="Add book: progress 45%." />
     <MESSAGE value="Little fix.." />
-    <option name="LAST_COMMIT_MESSAGE" value="Little fix.." />
+    <MESSAGE value="saving." />
+    <option name="LAST_COMMIT_MESSAGE" value="saving." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1196,20 +1202,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db_connection/add_book.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21864595">
-          <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.73140955">
+          <caret line="165" column="8" selection-start-line="165" selection-start-column="8" selection-end-line="165" selection-end-column="8" />
           <folding>
-            <element signature="e#309#3334#0#PHP" expanded="false" />
-            <marker date="1450191469751" expanded="true" signature="557:602" placeholder="SELECT langu..language..." />
-            <marker date="1450191469751" expanded="true" signature="1058:1120" placeholder="INSERT INTO book..." />
-            <marker date="1450191469751" expanded="true" signature="1550:1607" placeholder="INSERT INTO common_books..." />
-            <marker date="1450191469751" expanded="true" signature="2027:2065" placeholder="INSERT INTO language..." />
-            <marker date="1450191469751" expanded="true" signature="2405:2467" placeholder="INSERT INTO book..." />
-            <marker date="1450191469751" expanded="true" signature="2897:2954" placeholder="INSERT INTO common_books..." />
-            <marker date="1450191469751" expanded="true" signature="3760:3805" placeholder="SELECT langu..language..." />
-            <marker date="1450191469751" expanded="true" signature="4217:4255" placeholder="INSERT INTO language..." />
-            <marker date="1450191469751" expanded="true" signature="4649:4694" placeholder="SELECT langu..language..." />
-            <marker date="1450191469751" expanded="true" signature="5102:5140" placeholder="INSERT INTO language..." />
+            <marker date="1450192158258" expanded="true" signature="557:602" placeholder="SELECT langu..language..." />
+            <marker date="1450192158258" expanded="true" signature="1058:1120" placeholder="INSERT INTO book..." />
+            <marker date="1450192158258" expanded="true" signature="1550:1607" placeholder="INSERT INTO common_books..." />
+            <marker date="1450192158258" expanded="true" signature="2027:2065" placeholder="INSERT INTO language..." />
+            <marker date="1450192158258" expanded="true" signature="2405:2467" placeholder="INSERT INTO book..." />
+            <marker date="1450192158258" expanded="true" signature="2897:2954" placeholder="INSERT INTO common_books..." />
+            <marker date="1450192158258" expanded="true" signature="3806:3851" placeholder="SELECT langu..language..." />
+            <marker date="1450192158258" expanded="true" signature="4263:4301" placeholder="INSERT INTO language..." />
+            <marker date="1450192158258" expanded="true" signature="4695:4740" placeholder="SELECT langu..language..." />
+            <marker date="1450192158258" expanded="true" signature="5148:5186" placeholder="INSERT INTO language..." />
+            <marker date="1450192158258" expanded="true" signature="5645:5732" placeholder="INSERT INTO writing..." />
+            <marker date="1450192158258" expanded="true" signature="6223:6287" placeholder="INSERT INTO author_writing..." />
           </folding>
         </state>
       </provider>
