@@ -83,7 +83,7 @@ sec_session_start(); // start secure session
         <div class="container-fluid col-md-10 col-md-offset-1 col-xs-12">
             <div class="row">
                 <div class="col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
-                    <h2 class="text-center">Main <span class="glyphicon glyphicon-star" aria-hidden="true">
+                    <h2 class="text-center">Main <span class="glyphicon glyphicon-th" aria-hidden="true">
                     </h2>
                 </div>
 

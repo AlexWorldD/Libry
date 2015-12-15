@@ -93,7 +93,19 @@ sec_session_start(); // start secure session
                     <div class="panel panel-default">
 
                         <div class="panel-heading">
-
+                            <div class="text-right">
+                                <div class="row">
+                                    <!--
+                                    <button type="button" class="btn  btn-link"
+                                            onclick="add_book(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add
+                                        <span class="glyphicon glyphicon-plus"></span></button>
+                                    <a href="db_connection/get_xml.php?user_id=<?php echo htmlentities($_SESSION['user_id']); ?>"> XML export </a>
+                                    -->
+                                    <button type="button" class="btn  btn-link"
+                                            onclick="find_user(<?php echo htmlentities($_SESSION['user_id']); ?>)">Найти владельца
+                                        <span class="glyphicon glyphicon-search"></span></button>
+                                </div>
+                            </div>
 
                         </div>
                         <div class="panel-body">
@@ -149,6 +161,7 @@ sec_session_start(); // start secure session
                     </div>
                     <div class="modal-body text-justify" id="descrip_book">
                     </div>
+                    <br>
                     <div class="modal-footer">
 
 
@@ -165,6 +178,35 @@ sec_session_start(); // start secure session
                             <button type="button" class="btn btn-primary- btn-link" onclick="add_fav(<?php echo htmlentities($_SESSION['user_id']); ?>)">Add to <span class="glyphicon glyphicon-star-empty"></span></button>
                         </div>
                         -->
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <!-- Second Modal -->
+        <div class="modal fade" id="m_show_user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="row">
+                                <h4 class="modal-title text-center"><em>Книга найдена!</em></h4>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body text-justify">
+                        <div class="row">
+                            <div class="col-md-10">
+                                &nbsp <strong><span id="user_l"> </span> &nbsp </strong> <span id="user_n"> </span> &nbsp - &nbsp <span id="phone"></span>, &nbsp <span id="email"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->

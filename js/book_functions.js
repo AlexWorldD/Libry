@@ -377,6 +377,31 @@ function del_book(u_id) {
         });
     }
 }
+function find_user() {
+    $('#user_l').empty();
+    $('#user_n').empty();
+    $('#phone').empty();
+    $('#email').empty();
+    var sel = $('#t_my_books').datagrid('getSelected');
+    $("#m_show_user").modal('show');
+    if (sel) {
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/bd/db_connection/find_user.php",
+            dataType: "json",
+            data: "writing_id="+sel.writing_id,
+            error: function () {
+                //$('#add_fail').removeAttr("hidden");
+            },
+            success: function (data) {
+                $('#user_l').append(data[0].last_name);
+                $('#user_n').append(data[0].first_name);
+                $('#phone').append(data[0].phone);
+                $('#email').append(data[0].email);
+            }
+        });
+    }
+}
 function get_xml_m(u_id) {
     $.ajax({
         type: "POST",
