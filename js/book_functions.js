@@ -3,7 +3,7 @@
  */
 var writing_id;
 var user_id = 0;
-var res_t = false;
+var res_t;
 $(document).ready(function () {
     $('#t_books').datagrid({
         onDblClickRow: function (index, row) {
@@ -76,15 +76,15 @@ function add_fav(user_id) {
 $(document).ready(function () {
     $('#t_my_books').datagrid({
         /*
-        onDblClickCell: function(index, field, value) {
-            if (value!=0) {
-                alert('hi');
-            }
-            else {
-                alert('bb');
-            }
-        },
-        */
+         onDblClickCell: function(index, field, value) {
+         if (value!=0) {
+         alert('hi');
+         }
+         else {
+         alert('bb');
+         }
+         },
+         */
         onDblClickRow: function (index, row) {
 
 
@@ -146,7 +146,6 @@ function add_book(id) {
     $('#add_pat').val('');
     $("#add_book").modal('show');
 }
-
 $(function () {
     $('#title').devbridgeAutocomplete({
         serviceUrl: 'http://localhost:8080/bd/db_connection/get_title.php',
@@ -163,9 +162,7 @@ $(function () {
                 },
                 success: function (data) {
                     $('#add_l_n').val(data[0].last_name);
-
                     $('#add_f_n').val(data[0].first_name);
-
                     $('#add_pat').val(data[0].patronymic);
                     $('#a_y_born').val(data[0].year_born);
                     $('#a_y_death').val(data[0].year_death);
@@ -173,7 +170,7 @@ $(function () {
                     $('#a_year').val(data[0].release_year);
                 }
             });
-            res_t = true;
+            res_t = suggestion;
         }
 
     });
@@ -224,3 +221,32 @@ $(function () {
         }
     });
 });
+function save_book(u_id) {
+    // Adding book in Libry's already, count+1 only
+    if ($('#title').val() == res_t.value) {
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:8080/bd/db_connection/add_book.php",
+            dataType: "json",
+            data: "in=0&user_id=" + u_id + "&writing_id=" + res_t.data + "&lang=" + $('#a_lang').val() + "&pages=" + $('#a_page').val(),
+            error: function () {
+                alert("Error with second AJAX!");
+            },
+            success: function (data) {
+
+                $('#add_f_n').val(data[0].first_name);
+                $('#add_pat').val(data[0].patronymic);
+                $('#a_y_born').val(data[0].year_born);
+                $('#a_y_death').val(data[0].year_death);
+                $('#title').val('');
+            }
+        });
+        /*
+         if(jQuery.inArray($('#title').val(), res_t)==-1 && jQuery.inArray($('#title').val(), res_t)!=0) {
+         alert("hi");
+         }
+         */
+
+
+    }
+}

@@ -211,7 +211,7 @@ sec_session_start(); // start secure session
                                         <div class="col-md-12 col-xs-5">
                                             <div class="input-group">
                                                 <span class="input-group-addon">Название</span>
-                                                <input type="text" class="form-control" id="title" data-validation="length alphanumeric"/>
+                                                <input type="text" class="form-control" id="title" />
                                             </div>
                                         </div>
                                     </div>
@@ -333,7 +333,7 @@ sec_session_start(); // start secure session
                                         </div>
                                         <div class="btn-group" role="group">
                                             <button type="button" class="btn btn-link" id="btc"
-                                                    onclick="save_book(<?php echo htmlentities($_SESSION['user_id']); ?>)" >
+                                                    onclick="cancel_book(<?php echo htmlentities($_SESSION['user_id']); ?>)" >
                                                 Отмена
                                             </button>
                                         </div>
