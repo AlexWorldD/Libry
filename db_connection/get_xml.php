@@ -7,7 +7,7 @@
  */
 include_once "bd_connect_secure.php";
 
-$user_id = intval($_POST['user_id']);
+$user_id = intval($_GET['user_id']);
 ///
 $result = mysqli_query($mysqli, "SELECT
     t1.writing_id,
@@ -35,6 +35,33 @@ if (!$result) {
 } else {
     $file = fopen("my_books.xml", "w+");
     fputs($file, "<?xml version='1.0'  encoding=\"UTF-8\"?> \n");
+    fputs($file,"<xs:schema attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">
+  <xs:element name=\"myBooks\">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name=\"book\" maxOccurs=\"unbounded\" minOccurs=\"0\">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type=\"xs:integer\" name=\"id\"/>
+              <xs:element type=\"xs:string\" name=\"title\"/>
+              <xs:element name=\"author\">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type=\"xs:string\" name=\"last_name\"/>
+                    <xs:element type=\"xs:string\" name=\"first_name\"/>
+                    <xs:element type=\"xs:string\" name=\"patronymic\"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type=\"xs:integer\" name=\"page_number\"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>");
+    fputs($file, "\n");
     fputs($file, "<myBooks>");
     while ($row = mysqli_fetch_array($result)) {
         fputs($file, "\n");
