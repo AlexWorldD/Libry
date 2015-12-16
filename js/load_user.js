@@ -5,6 +5,7 @@ function load_user(it) {
     $.ajax({
         type: "POST",
         url: "http://localhost:8080/bd/db_connection/get_user.php",
+        //url: "http://172.20.37.219:8080/bd/db_connection/get_user.php",
         dataType: "json",
         data: "user_id=" + it,
         error: function () {
@@ -23,6 +24,7 @@ function load_user(it) {
                 $.ajax({
                     type: "POST",
                     url: "http://localhost:8080/bd/db_connection/get_user.php",
+                    //url: "http://172.20.37.219:8080/bd/db_connection/get_user.php",
                     dataType: "json",
                     data: "address_id=" + data[0].address_id,
                     error: function () {

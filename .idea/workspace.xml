@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="Save.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_connection/update_user.php" afterPath="$PROJECT_DIR$/db_connection/update_user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/user_functions.js" afterPath="$PROJECT_DIR$/js/user_functions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/load_user.js" afterPath="$PROJECT_DIR$/js/load_user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profile.php" afterPath="$PROJECT_DIR$/profile.php" />
     </list>
     <ignored path="StudID.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,18 +72,18 @@
       <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="95.129036">
-              <caret line="79" column="72" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
+            <state vertical-scroll-proportion="-3.516129">
+              <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="load_user.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="load_user.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/load_user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+            <state vertical-scroll-proportion="-0.06223176">
+              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
               <folding>
                 <element signature="n#!!doc;n#load_user#0" expanded="false" />
               </folding>
@@ -111,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="get_user.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="get_user.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db_connection/get_user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19533852">
-              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+            <state vertical-scroll-proportion="-7.096774">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="103" />
               <folding />
             </state>
           </provider>
@@ -213,7 +213,6 @@
         <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/db_connection/login_process.php" />
         <option value="$PROJECT_DIR$/db_connection/get_desc.php" />
-        <option value="$PROJECT_DIR$/js/load_user.js" />
         <option value="$PROJECT_DIR$/db_connection/get_city.php" />
         <option value="$PROJECT_DIR$/js/edit_user.js" />
         <option value="$PROJECT_DIR$/js/book_functions.js" />
@@ -225,12 +224,13 @@
         <option value="$PROJECT_DIR$/db_connection/functions.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/mybooks.php" />
-        <option value="$PROJECT_DIR$/profile.php" />
         <option value="$PROJECT_DIR$/books.php" />
         <option value="$PROJECT_DIR$/favorite.php" />
         <option value="$PROJECT_DIR$/db_connection/add_book.php" />
         <option value="$PROJECT_DIR$/js/user_functions.js" />
         <option value="$PROJECT_DIR$/db_connection/update_user.php" />
+        <option value="$PROJECT_DIR$/profile.php" />
+        <option value="$PROJECT_DIR$/js/load_user.js" />
       </list>
     </option>
   </component>
@@ -447,12 +447,6 @@
       <created>1449776201015</created>
       <option name="number" value="Default" />
       <updated>1449776201015</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Add js function for checking form.">
-      <created>1449787962214</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1449787962214</updated>
     </task>
     <task id="LOCAL-00004" summary="Finish Login and Registration.">
       <created>1449794754939</created>
@@ -742,7 +736,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450267840112</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Save.">
+      <created>1450271235738</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1450271235738</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -1259,29 +1259,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db_connection/get_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.096774">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="95.129036">
-          <caret line="79" column="72" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
+        <state vertical-scroll-proportion="-3.516129">
+          <caret line="155" column="0" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/load_user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="53" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+        <state vertical-scroll-proportion="-0.06223176">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding>
             <element signature="n#!!doc;n#load_user#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_connection/get_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19533852">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>

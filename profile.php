@@ -165,7 +165,7 @@ sec_session_start(); // start secure session
                                     <div class="input-group">
                                     <span class="input-group-addon"><span
                                             class="glyphicon glyphicon-phone"></span></span>
-                                        <input type="text" class="form-control" placeholder="" id="phone" disabled>
+                                        <input type="text" class="form-control" placeholder="" id="phone" disabled required>
                                     </div>
                                 </div>
                             </div>
