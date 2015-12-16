@@ -45,7 +45,7 @@ function user_save(id) {
 
     var up_req="user_id="+id+"&first_name="+$('#f_name').val()+"&last_name="+$('#l_name').val()+"&age="+$('#age').val()+
         "&sex="+$('#sex').val()+"&email="+$('#email').val()+"&phone="+$('#phone').val()+"&address="+$('#address').val()+
-    "&address2="+$('#address2').val()+"&city_id="+$('#city').val()+"&country_id="+$('#country').val();
+    "&address2="+$('#address2').val()+"&city="+$('#city').val()+"&country="+$('#country').val();
     //up_req=encodeURI(up_req);
     $.ajax({
             type: "POST",
