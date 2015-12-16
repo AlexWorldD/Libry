@@ -19,12 +19,13 @@ include_once 'db_connection/bd_connect_secure.php';?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Library">
-    <title>Main page</title>
+    <title>Favorites</title>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="Bootstrap3/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="js/easyui/easyui.css">
     <link rel="stylesheet" type="text/css" href="js/easyui/icon.css">
     <link href="Bootstrap3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Lekton:700' rel='stylesheet' type='text/css'>
     <link href="css/sidebar.css" rel="stylesheet">
     <script type="text/javascript" src="js/easyui/jquery_easy_ui.js"></script>
     <script type="text/javascript" src="http://www.jeasyui.com/easyui/datagrid-detailview.js"></script>
@@ -46,9 +47,7 @@ include_once 'db_connection/bd_connect_secure.php';?>
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
-                <a href="#">
-                    Libry
-                </a>
+                <h3 id="libry">Libry</h3>
             </li>
             <li>
                 <div class="welcome">
@@ -275,7 +274,7 @@ include_once 'db_connection/bd_connect_secure.php';?>
                         <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
                     </form>
                 </div>
-                <a href="register2.php" class="text-center new-account">Register </a>
+                <a href="register.php" class="text-center new-account">Register </a>
             </div>
         </div>
     </div>

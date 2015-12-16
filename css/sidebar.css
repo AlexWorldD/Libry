@@ -130,6 +130,13 @@ h4 > #user {
     top:20%;
 
     outline: none;
-}.vresize {
+}
+.vresize {
      resize: vertical;
+ }
+ #libry {
+     font-family: 'Lekton', sans-serif;
+     font-size: 54px;
+     color: ghostwhite;
+     opacity: 0.2;
  }

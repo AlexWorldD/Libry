@@ -26,6 +26,7 @@ include_once 'db_connection/bd_connect_secure.php';?>
     <link rel="stylesheet" type="text/css" href="js/easyui/icon.css">
     <link href="Bootstrap3/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/jQuery-Autocomplete/styles.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lekton:700' rel='stylesheet' type='text/css'>
     <link href="css/sidebar.css" rel="stylesheet">
     <script type="text/javascript" src="js/easyui/jquery_easy_ui.js"></script>
     <script type="text/javascript" src="http://www.jeasyui.com/easyui/datagrid-detailview.js"></script>
@@ -48,9 +49,9 @@ include_once 'db_connection/bd_connect_secure.php';?>
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
-                <a href="#">
-                    Libry
-                </a>
+
+                    <h3 id="libry">Libry</h3>
+
             </li>
             <li>
                 <div class="welcome">
@@ -256,7 +257,7 @@ include_once 'db_connection/bd_connect_secure.php';?>
                         <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
                     </form>
                 </div>
-                <a href="register2.php" class="text-center new-account">Register </a>
+                <a href="register.php" class="text-center new-account">Register </a>
             </div>
         </div>
     </div>

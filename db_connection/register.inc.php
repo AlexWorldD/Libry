@@ -55,7 +55,7 @@ if (isset($_POST['username'], $_POST['f_name'], $_POST['l_name'],$_POST['email']
                 exit();
             }
         }
-        header('Location: ./register_success.php');
+        header('Location: ./index.php');
         exit();
     }
 }

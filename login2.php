@@ -40,7 +40,7 @@ if (isset($_GET['error'])) {
                     <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
                 </form>
             </div>
-            <a href="register2.php" class="text-center new-account">Register </a>
+            <a href="register.php" class="text-center new-account">Register </a>
         </div>
     </div>
 </div>
