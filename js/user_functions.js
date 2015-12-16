@@ -17,10 +17,36 @@ function user_cancel(id) {
     load_user(id);
 }
 function user_save(id) {
-var up_req="user_id="+id+"&first_name="+$('#f_name').val()+"&last_name="+$('#l_name').val()+"&age="+$('#age').val()+
+    if($('#f_name').val()==0)
+    {
+        $('#f_name').focus();
+        return;
+    }
+    if($('#l_name').val()==0)
+    {
+        $('#l_name').focus();
+        return;
+    }
+    if($('#age').val()==0)
+    {
+        $('#age').focus();
+        return;
+    }
+    if($('#email').val()==0)
+    {
+        $('#email').focus();
+        return;
+    }
+    if($('#phone').val()==0)
+    {
+        $('#phone').focus();
+        return;
+    }
+
+    var up_req="user_id="+id+"&first_name="+$('#f_name').val()+"&last_name="+$('#l_name').val()+"&age="+$('#age').val()+
         "&sex="+$('#sex').val()+"&email="+$('#email').val()+"&phone="+$('#phone').val()+"&address="+$('#address').val()+
     "&address2="+$('#address2').val()+"&city_id="+$('#city').val()+"&country_id="+$('#country').val();
-    up_req=encodeURI(up_req);
+    //up_req=encodeURI(up_req);
     $.ajax({
             type: "POST",
             url: "http://localhost:8080/bd/db_connection/update_user.php",

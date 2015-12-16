@@ -51,6 +51,7 @@ if (!$request2->execute()) {
         $request3 = $mysqli->prepare("UPDATE `address` SET address=?, address2=?, city_id=? WHERE address_id=?");
         $request3->bind_param('ssii', $address, $address2, $city_id, $ad_id);
         if (!$request3->execute()) {
+            die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
             mysqli_query($mysqli, 'ROLLBACK;');
             header('Location: ../error.php?err=Registration failure: Update address table');
             exit();
