@@ -384,6 +384,37 @@ function save_book(u_id) {
         }
         // Require to add author to Libry
         else {
+            if($('#title').val()==0)
+            {
+                $('#title').focus();
+                return;
+            }
+            if($('#add_l_n').val()==0)
+            {
+                $('#add_l_n').focus();
+                return;
+            }
+            if($('#add_f_n').val()==0)
+            {
+                $('#add_f_n').focus();
+                return;
+            }
+            if($('#a_desc').val()==0)
+            {
+                $('#a_desc').focus();
+                return;
+            }
+            if($('#a_country').val()==0)
+            {
+                $('#a_country').focus();
+                return;
+            }
+            if($('#a_lang_orig').val()==0)
+            {
+                $('#a_lang_orig').focus();
+                return;
+            }
+
             $.ajax({
                 type: "POST",
                 url: "http://localhost:8080/bd/db_connection/add_book.php",
@@ -422,6 +453,7 @@ function save_book(u_id) {
                     $('#a_year').val('');
                 }
             });
+
         }
 
     }

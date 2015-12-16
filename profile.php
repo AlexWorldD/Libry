@@ -178,15 +178,13 @@ sec_session_start(); // start secure session
                                 <div class="col-md-5 col-xs-5">
                                     <div class="input-group">
                                         <span class="input-group-addon">Страна</span>
-                                        <select type="text" class="form-control" id="country" disabled>
-                                        </select>
+                                        <input type="text" class="form-control" id="country" disabled/>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-md-offset-1 col-xs-6 col-md-offset-1">
                                     <div class="input-group">
                                         <span class="input-group-addon">Город</span>
-                                        <select type="text" class="form-control" id="city" disabled>
-                                        </select>
+                                        <input type="text" class="form-control" id="city" disabled/>
                                     </div>
                                 </div>
                             </div>

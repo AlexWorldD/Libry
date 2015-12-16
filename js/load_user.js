@@ -29,14 +29,8 @@ function load_user(it) {
                         alert("Error with second AJAX!");
                     },
                     success: function (data) {
-                        $('#country').append(
-                            "<option value='" + data[0].country_id + "'>" + data[0].country + "</option>"
-                        );
-                        $('#country').val(data[0].country_id);
-                        $('#city').append(
-                            "<option value='" + data[0].city_id + "'>" + data[0].city + "</option>"
-                        );
-                        $('#city').val(data[0].city_id);
+                        $('#country').val(data[0].country);
+                        $('#city').val(data[0].city);
                         $('#address').val(data[0].address);
                         $('#address2').val(data[0].address2);
 
