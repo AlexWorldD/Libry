@@ -5,6 +5,8 @@ ehthumbs.db
 # Folders
 Bootstrap3/
 js/easyui/
+js/jQuery-Autocomplete
+css/jQuery-Autocomplete
 # Folder config file
 Desktop.ini
 

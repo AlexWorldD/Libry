@@ -1,0 +1,139 @@
+<?xml version='1.0'  encoding="UTF-8"?> 
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="myBooks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="book" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:integer" name="id"/>
+              <xs:element type="xs:string" name="title"/>
+              <xs:element name="author">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="last_name"/>
+                    <xs:element type="xs:string" name="first_name"/>
+                    <xs:element type="xs:string" name="patronymic"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:integer" name="page_number"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+<myBooks>
+<book>
+<id>
+1
+</id>
+<title>
+Медный всадник
+</title>
+<author>
+<last_name>
+Пушкин
+</last_name>
+<first_name>
+Александр
+</first_name>
+<patronymic>
+Сергеевич
+</patronymic>
+</author>
+<page_number>
+288
+</page_number>
+</book>
+<book>
+<id>
+7
+</id>
+<title>
+Мёртвые души
+</title>
+<author>
+<last_name>
+Гоголь
+</last_name>
+<first_name>
+Николай
+</first_name>
+<patronymic>
+Васильевич
+</patronymic>
+</author>
+<page_number>
+416
+</page_number>
+</book>
+<book>
+<id>
+6
+</id>
+<title>
+Война и Мир
+</title>
+<author>
+<last_name>
+Толстой
+</last_name>
+<first_name>
+Лев
+</first_name>
+<patronymic>
+Николаевич
+</patronymic>
+</author>
+<page_number>
+0
+</page_number>
+</book>
+<book>
+<id>
+10
+</id>
+<title>
+Дама с собачкой
+</title>
+<author>
+<last_name>
+Чехов
+</last_name>
+<first_name>
+Антон
+</first_name>
+<patronymic>
+Павлович
+</patronymic>
+</author>
+<page_number>
+112
+</page_number>
+</book>
+<book>
+<id>
+11
+</id>
+<title>
+Алиса в стране чудес
+</title>
+<author>
+<last_name>
+Кэролл
+</last_name>
+<first_name>
+Льюис
+</first_name>
+<patronymic>
+
+</patronymic>
+</author>
+<page_number>
+112
+</page_number>
+</book>
+</myBooks>
