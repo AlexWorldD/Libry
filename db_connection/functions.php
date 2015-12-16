@@ -62,7 +62,7 @@ function login($username, $password, $mysqli) {
         }
     } else {
         // Can't create statement
-        header("Location: ../error.php?err=Database error: cannot prepare statement");
+        die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
         exit();
     }
 }

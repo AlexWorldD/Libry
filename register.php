@@ -45,7 +45,7 @@ include_once 'db_connection/functions.php';
                     <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
                 </form>
             </div>
-            <a href="login2.php" class="text-center new-account">Sign In </a>
+            <a href="index.php" class="text-center new-account">Sign In </a>
         </div>
     </div>
 </div>

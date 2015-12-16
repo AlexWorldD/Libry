@@ -77,7 +77,7 @@ sec_session_start(); // start secure session
                 <a href="#">Profile</a>
             </li>
             <li>
-                <a href="#">About</a>
+                <a href="https://github.com/AlexWorldD/StudID">About</a>
             </li>
         </ul>
     </div>

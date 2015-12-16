@@ -29,6 +29,7 @@ include_once 'db_connection/bd_connect_secure.php';?>
     <link href="css/sidebar.css" rel="stylesheet">
     <script type="text/javascript" src="js/easyui/jquery_easy_ui.js"></script>
     <script type="text/javascript" src="http://www.jeasyui.com/easyui/datagrid-detailview.js"></script>
+    <script type="text/JavaScript" src="js/jQuery-Autocomplete/jquery.autocomplete.js"></script>
 
     <!-- <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css"> -->
     <script type="text/JavaScript" src="js/sha512.js"></script>
@@ -75,7 +76,7 @@ include_once 'db_connection/bd_connect_secure.php';?>
                 <a href="profile.php">Profile</a>
             </li>
             <li>
-                <a href="#">About</a>
+                <a href="https://github.com/AlexWorldD/StudID">About</a>
             </li>
         </ul>
     </div>
