@@ -49,7 +49,7 @@ function user_save(id) {
     //up_req=encodeURI(up_req);
     $.ajax({
             type: "POST",
-            url: "http://188.166.145.173/bd/db_connection/update_user.php",
+            url: "http://188.166.145.173/db_connection/update_user.php",
             dataType: "json",
             data: up_req,
             error: function () {

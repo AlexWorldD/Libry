@@ -18,7 +18,7 @@ $(document).ready(function () {
             // AJAX for additional info about selected book
             $.ajax({
                 type: "POST",
-                url: "http://188.166.145.173/bd/db_connection/book_info.php",
+                url: "http://188.166.145.173/db_connection/book_info.php",
                 //url: "http://localhost:8080/bd/db_connection/book_info.php",
                 dataType: "json",
                 data: "writing_id=" + row.writing_id + "&user_id=" + user_id,
@@ -53,7 +53,7 @@ $(document).ready(function () {
 function add_fav(user_id) {
     $.ajax({
         type: "POST",
-        url: "http://188.166.145.173/bd/db_connection/add_favorite.php",
+        url: "http://188.166.145.173/db_connection/add_favorite.php",
         dataType: "json",
         data: "writing_id=" + writing_id + "&user_id=" + user_id,
         error: function () {
@@ -98,7 +98,7 @@ $(document).ready(function () {
             // AJAX for additional info about selected book
             $.ajax({
                 type: "POST",
-                url: "http://188.166.145.173/bd/db_connection/book_info.php",
+                url: "http://188.166.145.173/db_connection/book_info.php",
                 dataType: "json",
                 data: "writing_id=" + row.writing_id + "&user_id=" + user_id,
                 error: function () {
@@ -161,13 +161,13 @@ function add_book(id) {
 }
 $(function () {
     $('#title').devbridgeAutocomplete({
-        serviceUrl: 'http://188.166.145.173/bd/db_connection/get_title.php',
+        serviceUrl: 'http://188.166.145.173/db_connection/get_title.php',
         preventBadQueries: true,
         showNoSuggestionNotice: true,
         onSelect: function (suggestion) {
             $.ajax({
                 type: "POST",
-                url: "http://188.166.145.173/bd/db_connection/get_author.php",
+                url: "http://188.166.145.173/db_connection/get_author.php",
                 dataType: "json",
                 data: "writing_id=" + suggestion.data,
                 error: function () {
@@ -190,7 +190,7 @@ $(function () {
 });
 $(function () {
     $('#search').devbridgeAutocomplete({
-        serviceUrl: 'http://188.166.145.173/bd/db_connection/get_title.php',
+        serviceUrl: 'http://188.166.145.173/db_connection/get_title.php',
         preventBadQueries: true,
         showNoSuggestionNotice: true,
         onSelect: function (suggestion) {
@@ -202,7 +202,7 @@ $(function () {
             );
             $.ajax({
                 type: "POST",
-                url: "http://188.166.145.173/bd/db_connection/get_author.php",
+                url: "http://188.166.145.173/db_connection/get_author.php",
                 dataType: "json",
                 data: "writing_id=" + suggestion.data,
                 error: function () {
@@ -229,7 +229,7 @@ $(function () {
             });
             $.ajax({
                 type: "POST",
-                url: "http://188.166.145.173/bd/db_connection/get_desc.php",
+                url: "http://188.166.145.173/db_connection/get_desc.php",
                 dataType: "json",
                 data: "writing_id=" + suggestion.data,
                 error: function () {
@@ -266,12 +266,12 @@ $(function () {
  */
 $(function () {
     $('#add_l_n').devbridgeAutocomplete({
-        serviceUrl: 'http://188.166.145.173/bd/db_connection/get_author.php',
+        serviceUrl: 'http://188.166.145.173/db_connection/get_author.php',
         preventBadQueries: true,
         onSelect: function (suggestion) {
             $.ajax({
                 type: "POST",
-                url: "http://188.166.145.173/bd/db_connection/get_author.php",
+                url: "http://188.166.145.173/db_connection/get_author.php",
                 dataType: "json",
                 data: "author_id=" + suggestion.data,
                 error: function () {
@@ -293,19 +293,19 @@ $(function () {
 });
 $(function () {
     $('#a_lang_orig').devbridgeAutocomplete({
-        serviceUrl: 'http://188.166.145.173/bd/db_connection/get_lang.php',
+        serviceUrl: 'http://188.166.145.173/db_connection/get_lang.php',
         preventBadQueries: true,
         onSelect: function (suggestion) {
         }
     });
     $('#a_lang').devbridgeAutocomplete({
-        serviceUrl: 'http://188.166.145.173/bd/db_connection/get_lang.php',
+        serviceUrl: 'http://188.166.145.173/db_connection/get_lang.php',
         preventBadQueries: true,
         onSelect: function (suggestion) {
         }
     });
     $('#a_country').devbridgeAutocomplete({
-        serviceUrl: 'http://188.166.145.173/bd/db_connection/get_country.php',
+        serviceUrl: 'http://188.166.145.173/db_connection/get_country.php',
         preventBadQueries: true,
         onSelect: function (suggestion) {
         }
@@ -316,7 +316,7 @@ function save_book(u_id) {
     if (res_t != null) {
         $.ajax({
             type: "POST",
-            url: "http://188.166.145.173/bd/db_connection/add_book.php",
+            url: "http://188.166.145.173/db_connection/add_book.php",
             dataType: "json",
             data: "in=1&user_id=" + u_id + "&writing_id=" + res_t.data + "&lang=" + $('#a_lang').val() + "&pages=" + $('#a_page').val(),
             error: function () {
@@ -351,7 +351,7 @@ function save_book(u_id) {
         if (res_a != null) {
             $.ajax({
                 type: "POST",
-                url: "http://188.166.145.173/bd/db_connection/add_book.php",
+                url: "http://188.166.145.173/db_connection/add_book.php",
                 dataType: "json",
                 data: "in=0&user_id=" + u_id +
                 "&title=" + $('#title').val() +
@@ -418,7 +418,7 @@ function save_book(u_id) {
 
             $.ajax({
                 type: "POST",
-                url: "http://188.166.145.173/bd/db_connection/add_book.php",
+                url: "http://188.166.145.173/db_connection/add_book.php",
                 dataType: "json",
                 data: "in=0&user_id=" + u_id +
                 "&title=" + $('#title').val() +
@@ -468,7 +468,7 @@ function del_book(u_id) {
     if (del_row) {
         $.ajax({
             type: "POST",
-            url: "http://188.166.145.173/bd/db_connection/delete.php",
+            url: "http://188.166.145.173/db_connection/delete.php",
             dataType: "json",
             data: "user_id="+u_id+"&book_id="+del_row.book_id,
             error: function () {
@@ -490,7 +490,7 @@ function find_user() {
     if (sel) {
         $.ajax({
             type: "POST",
-            url: "http://188.166.145.173/bd/db_connection/find_user.php",
+            url: "http://188.166.145.173/db_connection/find_user.php",
             dataType: "json",
             data: "writing_id="+sel.writing_id,
             error: function () {
@@ -508,7 +508,7 @@ function find_user() {
 function get_xml_m(u_id) {
     $.ajax({
         type: "POST",
-        url: "http://188.166.145.173/bd/db_connection/get_xml.php",
+        url: "http://188.166.145.173/db_connection/get_xml.php",
         dataType: "json",
         data: "user_id="+u_id+"&mode=my",
         error: function () {

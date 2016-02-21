@@ -4,7 +4,7 @@
 function load_user(it) {
     $.ajax({
         type: "POST",
-        url: "http://188.166.145.173/bd/db_connection/get_user.php",
+        url: "http://188.166.145.173/db_connection/get_user.php",
         //url: "http://172.20.37.219:8080/bd/db_connection/get_user.php",
         dataType: "json",
         data: "user_id=" + it,
@@ -23,7 +23,7 @@ function load_user(it) {
             if (data[0].address_id) {
                 $.ajax({
                     type: "POST",
-                    url: "http://188.166.145.173/bd/db_connection/get_user.php",
+                    url: "http://188.166.145.173/db_connection/get_user.php",
                     //url: "http://172.20.37.219:8080/bd/db_connection/get_user.php",
                     dataType: "json",
                     data: "address_id=" + data[0].address_id,
