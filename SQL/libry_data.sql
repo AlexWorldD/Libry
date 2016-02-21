@@ -115,3 +115,10 @@ INSERT INTO book VALUES (1, 1, NULL, 55),
 (7, 7, NULL, 416),
 (8, 8, 1, 382);
 COMMIT;
+--
+-- Dumping data for table book
+--
+SET AUTOCOMMIT=0;
+INSERT INTO common_books VALUES (1, 1), 
+(4,1);
+COMMIT;
