@@ -7,7 +7,7 @@
  */
 include_once 'login_config.php';
 // USER - SELECT, INSERT, UPDATE and DELETE.
-$mysqli = new mysqli(HOST, USER, PASSWORD , DATABASE);
-if (!$mysqli) {
+$mysqli = mysqli_connect('localhost',USER, PASSWORD , DATABASE);
+if (mysqli_connect_errno()) {
     die('Can\'t connect: ' . mysqli_connect_error());
 }

@@ -7,7 +7,7 @@
  */
 include_once 'login_config.php';
 // login - SELECT, INSERT  only.
-$mysqli = new mysqli(HOST, USER_Login, PASSWORD_Login , DATABASE);
-if (!$mysqli) {
+$mysqli = mysqli_connect('localhost', USER_Login, PASSWORD_Login , DATABASE);
+if (mysqli_connect_errno()) {
     die('Can\'t connect: ' . mysqli_connect_error());
 }

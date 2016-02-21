@@ -23,13 +23,13 @@ function sec_session_start()
 }
 // Login function
 function login($username, $password, $mysqli) {
-    if ($stmt = $mysqli->prepare("SELECT user_id, password, salt FROM user WHERE username = ? LIMIT 1")) {
-        $stmt->bind_param('s', $username);
-        $stmt->execute();
-        $stmt->store_result();
+    if ($stmt = mysqli_prepare($mysqli, "SELECT user_id, password, salt FROM user WHERE username = ? LIMIT 1")) {
+        mysqli_stmt_bind_param($stmt, 's', $username);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_store_result($stmt);
         //Getting variables from result
-        $stmt->bind_result($user_id, $bd_pass, $salt);
-        $stmt->fetch();
+        mysqli_stmt_bind_result($stmt, $user_id, $bd_pass, $salt);
+        mysqli_stmt_fetch($stmt);
         // Checking username and password
         // pass for Alexey
         //$password='qwerty';

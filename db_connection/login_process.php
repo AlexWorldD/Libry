@@ -5,8 +5,7 @@
  * Date: 11.12.2015
  * Time: 0:01
  */
-$mysqli;
-include_once 'bd_connect.php';
+include_once 'bd_connect.php';;
 include_once 'functions.php';
 $er_msg=""; // message for login errors
 sec_session_start(); // Start secure session
