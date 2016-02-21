@@ -7,12 +7,12 @@ function edit_user() {
     var c2=$( '#city').val();
     $(function () {
         $('#country').devbridgeAutocomplete({
-            serviceUrl: 'http://localhost:8080/bd/db_connection/get_country.php',
+            serviceUrl: 'http://188.166.145.173/bd/db_connection/get_country.php',
             preventBadQueries: true,
             onSelect: function (suggestion) {
 
                     $('#city').devbridgeAutocomplete({
-                        serviceUrl: 'http://localhost:8080/bd/db_connection/get_city.php?country_id='+suggestion.data,
+                        serviceUrl: 'http://188.166.145.173/bd/db_connection/get_city.php?country_id='+suggestion.data,
                         preventBadQueries: true,
                         onSelect: function (suggestion) {
 
@@ -89,7 +89,7 @@ function edit_user() {
 }
 $(function () {
     $('#country').devbridgeAutocomplete({
-        serviceUrl: 'http://localhost:8080/bd/db_connection/get_country.php',
+        serviceUrl: 'http://188.166.145.173/bd/db_connection/get_country.php',
         preventBadQueries: true,
         onSelect: function (suggestion) {
 

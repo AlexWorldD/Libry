@@ -62,7 +62,7 @@ function login($username, $password, $mysqli) {
         }
     } else {
         // Can't create statement
-        die('Select Error (' . $mysqli->errno . ') ' . $mysqli->error);
+        die('Select Error (' . $stmt->errno . ') ' . $stmt->error);
         exit();
     }
 }
