@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="Save.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webServers.xml" afterPath="$PROJECT_DIR$/.idea/webServers.xml" />
+    <list default="true" id="107232b8-a5c2-43a9-bd28-fcbac4484af2" name="Default" comment="Try to deploy on server.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_connection/functions.php" afterPath="$PROJECT_DIR$/db_connection/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_connection/get_xml.php" afterPath="$PROJECT_DIR$/db_connection/get_xml.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_connection/login_process.php" afterPath="$PROJECT_DIR$/db_connection/login_process.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db_connection/my_books.xml" afterPath="$PROJECT_DIR$/db_connection/my_books.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/book_functions.js" afterPath="$PROJECT_DIR$/js/book_functions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/edit_user.js" afterPath="$PROJECT_DIR$/js/edit_user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/load_user.js" afterPath="$PROJECT_DIR$/js/load_user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/loadcity.js" afterPath="$PROJECT_DIR$/js/loadcity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/user_functions.js" afterPath="$PROJECT_DIR$/js/user_functions.js" />
     </list>
     <ignored path="StudID.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -161,6 +150,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -418,12 +412,6 @@
       <created>1449776201015</created>
       <option name="number" value="Default" />
       <updated>1449776201015</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Finish Login and Registration.">
-      <created>1449794754939</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1449794754939</updated>
     </task>
     <task id="LOCAL-00005" summary="Add UI with Bootstrap3 for Sign In and Register pages.">
       <created>1449849233499</created>
@@ -713,7 +701,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450271235738</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Try to deploy on server.">
+      <created>1456056260498</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1456056260517</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -727,13 +721,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15208334" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32953367" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -741,7 +736,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -763,7 +757,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Start autocomplete for Book Adding." />
     <MESSAGE value="Autocomplete." />
     <MESSAGE value="WOrking.." />
     <MESSAGE value="Value and data for autocomplete." />
@@ -788,7 +781,8 @@
     <MESSAGE value="Prepare for upload to server." />
     <MESSAGE value="Some fixes." />
     <MESSAGE value="Save." />
-    <option name="LAST_COMMIT_MESSAGE" value="Save." />
+    <MESSAGE value="Try to deploy on server." />
+    <option name="LAST_COMMIT_MESSAGE" value="Try to deploy on server." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -930,6 +924,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7096774">
           <caret line="47" column="10" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+          <folding>
+            <marker date="1450345533293" expanded="true" signature="203:717" placeholder="SELECT t1.wr..writing_id..." />
+            <marker date="1450345533293" expanded="true" signature="326:494" placeholder="SELECT writi..book..." />
+          </folding>
         </state>
       </provider>
     </entry>
