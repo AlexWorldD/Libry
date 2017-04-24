@@ -1,4 +1,4 @@
-###UPDTE 03/25/16 - Server's been closed...
+### UPDTE 03/25/16 - Server's been closed...
 ~~###UPDATE 03/16/16 - Address: 188.166.145.173~~
 <hr>
 # Libry
@@ -17,24 +17,26 @@
 ### *Libry* - современная распределенная библиотека!
 <hr>
 #### Функциональность
+
 0. Безопасные регистрация и логин
-  * передача пароля **только** в зашифрованном виде
-  * ограниченность привилегий работы с БД для неавторизированных пользователей
-  * требование надёжного пароля
+   * передача пароля **только** в зашифрованном виде
+   * ограниченность привилегий работы с БД для неавторизированных пользователей
+   * требование надёжного пароля
 1. Интерактивный поиск книги на главной старице
-  * автодополнение названия
-  * отображение информации о найденной книге
+   * автодополнение названия
+   * отображение информации о найденной книге
 2. Просмотр, добавление и удаление своих книг
-  * интерактивная таблица книг пользователя с возможностью сортировки по отдельным столбцам
-  * *информационная* карточка о каждой книге
-  * добавление книги
-    - интерактивный интерфейс с автодополнением главных полей
-    - использование **транзакции** на стороне сервера
-  * удаление выбранной книги
-  * *XML-export*
+   * интерактивная таблица книг пользователя с возможностью сортировки по отдельным столбцам
+   * *информационная* карточка о каждой книге
+   * добавление книги
+      - интерактивный интерфейс с автодополнением главных полей
+      - использование **транзакции** на стороне сервера
+   * удаление выбранной книги
+   * *XML-export*
 3. Отображение списка *желаемых* книг с указанием их наличия в **Libry** и возможность получения контактов владельца
 4. Отображение списка **всех** книг с возможностью добавить выбранную книгу в Whishlist
 5. Возможность изменить персональную и контактную информацию о пользователе
+
 <hr>
 
 ### Структура БД
@@ -43,18 +45,12 @@
    
 <hr>
 ### Технологии
-* [MySQL] - open-source db!
-* [PHP] - awesome language
-* [jQuery] - useful library
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
-* [easyUI] - for cool dynamic tables
-* [Ajax AutoComplete for jQuery]
-* [SHA512]: for hashing passwords
+## Built With
 
- [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
- [MySQL]: <https://www.mysql.com/>
- [PHP]: <https://secure.php.net/>
- [jQuery]: <http://jquery.com>
- [easyUI]: <http://www.jeasyui.com/>
- [Ajax AutoComplete for jQuery]: <https://www.devbridge.com/sourcery/components/jquery-autocomplete/>
- [SHA512]: <http://pajhome.org.uk/crypt/md5/>
+* [Twitter Bootstrap](http://twitter.github.com/bootstrap/) - great UI boilerplate for modern web apps
+* [MySQL](https://www.mysql.com/) - open-source db!
+* [PHP](https://secure.php.net/) - awesome language
+* [jQuery](http://jquery.com) - useful library
+* [easyUI](http://www.jeasyui.com/) - for cool dynamic tables
+* [Ajax AutoComplete for jQuery](https://www.devbridge.com/sourcery/components/jquery-autocomplete/)
+* [SHA512](http://pajhome.org.uk/crypt/md5/) - for hashing passwords
