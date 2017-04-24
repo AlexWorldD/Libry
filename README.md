@@ -38,8 +38,7 @@
 <hr>
 
 ### Структура БД
-![alt text][logo]
-[logo]: https://github.com/AlexWorldD/StudID/blob/master/SQL/EER%20for%20Libry.png "EER"
+![alt text](https://github.com/AlexWorldD/StudID/blob/master/SQL/EER%20for%20Libry.png)
    > функциональность для работы с *Rental* реализовать не успел.. Безумно сожалею.
    
 <hr>
